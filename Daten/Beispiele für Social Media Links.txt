@@ -1,0 +1,10 @@
+Beispiel für korrekte Links
+https://www.facebook.com/StadtportalEssen?fref=ts
+https://twitter.com/Essen_Ruhr
+https://www.youtube.com/channel/UCFBHjMgem5MfkJxJPMvpO7A
+https://instagram.com/essen_ruhr/
+
+Beispiel für Share Links
+http://www.facebook.com/sharer.php?t=Homepage&amp;u=https://www.duesseldorf.de/
+http://www.twitter.com/share?text=Homepage&amp;url=https://www.duesseldorf.de/&amp;hashtags=duesseldorf
+http://plus.google.com/share?text=Homepage&amp;url=https://www.duesseldorf.de/&amp;hl=de
