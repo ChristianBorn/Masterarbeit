@@ -127,14 +127,6 @@
     "all_links": [],
     "all_channels": []
   },
-  "Lippe": {
-    "all_links": [],
-    "all_channels": []
-  },
-  "Dinslaken": {
-    "all_links": [],
-    "all_channels": []
-  },
   "D\u00f6rentrup": {
     "all_links": [],
     "all_channels": []
@@ -348,6 +340,10 @@
     "all_channels": []
   },
   "Kranenburg": {
+    "all_links": [],
+    "all_channels": []
+  },
+  "Krefeld": {
     "all_links": [],
     "all_channels": []
   },
@@ -695,6 +691,10 @@
     "all_links": [],
     "all_channels": []
   },
+  "Schwalmtal": {
+    "all_links": [],
+    "all_channels": []
+  },
   "Schwelm": {
     "all_links": [],
     "all_channels": []
@@ -792,6 +792,10 @@
     "all_channels": []
   },
   "Vlotho": {
+    "all_links": [],
+    "all_channels": []
+  },
+  "Voerde (Niederrhein)": {
     "all_links": [],
     "all_channels": []
   },

@@ -17,6 +17,7 @@ from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import test_data
+import analyse_data
 
 def check_social(string):
     if string == None:
@@ -94,13 +95,17 @@ def get_links_test():
     print('[+] Done')
 def get_links():
     data = read_file()
-    #data = pandas.DataFrame({'Kommune/Kreis':'Moers','Internet':'www.nideggen.de'}, index=[0])
+    #data = pandas.DataFrame({'Kommune/Kreis':'Moers','Internet':'www.ostbevern.de'}, index=[0])
     Kommunen = {}
     social_link_filter = SoupStrainer('a', {'href':check_social})
     counter = 0
     check_num = data.shape[0]
     selenium_num = 0
     error_num = 0
+    social_channels_list = ['twitter', 'facebook', 'youtube', 'google', 
+                            'flickr', 'plus.google', 'instagram',
+                            'linkedin', 'xing', 'pinterest',
+                            'vimeo', 'foursquare', 'tumblr']
     with open('errors.txt', 'w') as errorlog:
         errorlog.write('')
     for index, row in data.iterrows():
@@ -147,17 +152,22 @@ def get_links():
             parsed_uri = urlparse(link_href)
             try:
                 domain = parsed_uri.hostname.split('.')[-2]
-                links_dict[domain] = link_href
-                all_links.append(link_href)
-                all_channels.append(domain)
+                if domain in social_channels_list:
+                    links_dict[domain] = link_href
+                    all_links.append(link_href)
+                    all_channels.append(domain)
+                else:
+                    raise AttributeError
             # Falls die Kommune nur Redirects auf Ihre Kanäle hat
             except AttributeError:
-                complete_link = urlparse(link).hostname+link_href
-                all_links.append(complete_link)
-                social_channels_list = ['twitter', 'facebook', 'youtube', 'google', 
-                            'flickr', 'plus.google', 'instagram',
-                            'linkedin', 'xing', 'pinterest',
-                            'vimeo', 'foursquare', 'tumblr']
+                # Überprüfung, ob der Redirect über einen relativen oder absoluten Link erfolgt
+                if link_href.startswith('https') or link_href.startswith('http'):
+                    complete_link = link_href
+                    all_links.append(complete_link)
+                # Falls relativer Link, muss Domain vor den relativen Link gesetzt werden
+                else:
+                    complete_link = urlparse(link).hostname+link_href
+                    all_links.append(complete_link)
                 for elem in social_channels_list:
                     if elem in link_href:
                         links_dict[elem] = complete_link
@@ -195,6 +205,7 @@ def open_website(link):
 def main():
     get_links()
     test_data.main()
+    analyse_data.main()
     #get_links_test()
     #read_file()
 
