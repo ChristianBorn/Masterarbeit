@@ -14,6 +14,9 @@ from urllib.error import HTTPError
 from socket import error as SocketError
 from http.cookiejar import CookieJar
 from time import sleep
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import test_data
 
 def check_social(string):
     if string == None:
@@ -54,7 +57,6 @@ def get_links_test():
         links_dict = {}
         all_links = []
         all_channels = []
-        check_again = {}
         print('[+] Opening URL '+link)
         req = urllib.request.Request(link)
         opener = urllib.request.build_opener()
@@ -91,39 +93,55 @@ def get_links_test():
         json.dump(Kommunen, file, indent=2)
     print('[+] Done')
 def get_links():
-    #ToDo: Iteration über Dataframe
     data = read_file()
-    #data = pandas.DataFrame({'Kommune/Kreis':'Moers','Internet':'www.moers.de'}, index=[0])
+    #data = pandas.DataFrame({'Kommune/Kreis':'Moers','Internet':'www.nideggen.de'}, index=[0])
     Kommunen = {}
     social_link_filter = SoupStrainer('a', {'href':check_social})
+    counter = 0
+    check_num = data.shape[0]
+    selenium_num = 0
+    error_num = 0
+    with open('errors.txt', 'w') as errorlog:
+        errorlog.write('')
     for index, row in data.iterrows():
+        counter += 1
         Kommune = row.loc['Kommune/Kreis']
-        link = 'https://'+row.loc['Internet'].strip(' ')
-        link_https = 'http://'+row.loc['Internet'].strip(' ')
+        link = 'http://'+row.loc['Internet'].strip(' ')
+        link_https = 'https://'+row.loc['Internet'].strip(' ')
         print('[+] Getting Links for '+Kommune)
         links_dict = {}
         all_links = []
         all_channels = []
+        # Abrufen der Website, erst ein http-Link, wenn fehlgeschlagen mit https
         print('[+] Opening URL '+link)
         try:    
-            website = urllib.request.Request(link,headers={'User-Agent' : "Magic Browser"})
-            cj = CookieJar()
-            opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cj))
-            website = opener.open(website)
+            website = open_website(link)
         except:
             print('[-] Got invalid link')
             try:
                 print('[+] Opening URL '+link_https)
-                website = urllib.request.Request(link_https,headers={'User-Agent' : "Magic Browser"})
-                cj = CookieJar()
-                opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cj))
-                website = opener.open(website)
+                website = open_website(link_https)
             except:
                 print('[-] Got invalid link')
+                error_num += 1
                 with open('errors.txt', 'a') as errorlog:
                     errorlog.write(Kommune+': '+link)
                 continue
         social_links = BeautifulSoup(website, 'html.parser', parse_only=social_link_filter)
+        # Check, wenn social_links leer ist, ob es eine Weiterleitung von der Homepage gibt
+        if len(social_links) == 0:
+            try:    
+                link = get_url_by_selenium(link)
+                print(link)
+                website = open_website(link)
+                selenium_num += 1
+            except:
+                error_num += 1
+                print('[-] Got invalid link')
+                with open('errors.txt', 'a') as errorlog:
+                    errorlog.write(Kommune+': '+link)
+                continue
+            social_links = BeautifulSoup(website, 'html.parser', parse_only=social_link_filter)
         for social_link in social_links:
             link_href = social_link.get('href')
             parsed_uri = urlparse(link_href)
@@ -152,18 +170,32 @@ def get_links():
     print('[+] Dumping to JSON')
     with open('Social_Links.json', 'w') as file:
         json.dump(Kommunen, file, indent=2)
+    print('Number of Links checked: '+str(counter)+' of '+str(check_num))
+    print('Number of selenium openings: '+str(selenium_num))
+    print('Number of errors in URLs: '+str(error_num))
     print(['Done'])
 
         #link = link.get('href')
         #print(check_social(link))
     # print(links)
     # print(len(links))
-
-def scrape_links(data,results)
+def get_url_by_selenium(link):
+    driver = webdriver.Chrome()
+    driver.get(link)
+    url = driver.current_url
+    driver.close()
+    return url
+def open_website(link):
+    website = urllib.request.Request(link,headers={'User-Agent' : "Magic Browser"})
+    cj = CookieJar()
+    opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cj))
+    website = opener.open(website)
+    return website
 
 def main():
-    #get_links()
-    get_links_test()
+    get_links()
+    test_data.main()
+    #get_links_test()
     #read_file()
 
 if __name__ == '__main__':

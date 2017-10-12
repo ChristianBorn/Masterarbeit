@@ -15,10 +15,10 @@
       "http://www.twitter.com/presseamtaachen"
     ],
     "all_channels": [
-      "instagram",
-      "twitter",
       "facebook",
-      "google"
+      "twitter",
+      "google",
+      "instagram"
     ]
   },
   "St\u00e4dteregion Aachen": {
@@ -35,9 +35,9 @@
       "https://www.youtube.com/user/AhausMarketing"
     ],
     "all_channels": [
-      "twitter",
       "facebook",
-      "youtube"
+      "youtube",
+      "twitter"
     ]
   },
   "Ahlen": {
@@ -48,13 +48,26 @@
       "https://twitter.com/ahlen_de"
     ],
     "all_channels": [
-      "twitter",
-      "facebook"
+      "facebook",
+      "twitter"
     ]
   },
   "Aldenhoven": {
-    "all_links": [],
-    "all_channels": []
+    "facebook": "https://www.facebook.com/Jugendrat-Aldenhoven-1712490965702826/",
+    "twitter": "https://twitter.com/GemAldenhoven",
+    "youtube": "https://www.youtube.com/user/GemeindeAldenhoven",
+    "all_links": [
+      "https://www.facebook.com/gemeinde.aldenhoven",
+      "https://twitter.com/GemAldenhoven",
+      "https://www.youtube.com/user/GemeindeAldenhoven",
+      "https://www.facebook.com/feuerwehr.aldenhoven.9",
+      "https://www.facebook.com/Jugendrat-Aldenhoven-1712490965702826/"
+    ],
+    "all_channels": [
+      "facebook",
+      "youtube",
+      "twitter"
+    ]
   },
   "Alfter": {
     "all_links": [],
@@ -111,8 +124,8 @@
       "https://translate.google.de"
     ],
     "all_channels": [
-      "twitter",
       "facebook",
+      "twitter",
       "google"
     ]
   },
@@ -133,8 +146,8 @@
       "https://twitter.com/rathausATTD"
     ],
     "all_channels": [
-      "twitter",
-      "facebook"
+      "facebook",
+      "twitter"
     ]
   },
   "Augustdorf": {
@@ -199,9 +212,9 @@
       "www.bad-salzuflen.de/staatsbad-redirect/youtube.html"
     ],
     "all_channels": [
-      "twitter",
       "facebook",
-      "youtube"
+      "youtube",
+      "twitter"
     ]
   },
   "Bad Sassendorf": {
@@ -279,10 +292,10 @@
       "https://www.flickr.com/photos/71605870@N04"
     ],
     "all_channels": [
-      "flickr",
-      "twitter",
       "facebook",
-      "youtube"
+      "youtube",
+      "twitter",
+      "flickr"
     ]
   },
   "Rheinisch-Bergischer Kreis": {
@@ -295,9 +308,9 @@
       "https://www.flickr.com/photos/149062153@N05/"
     ],
     "all_channels": [
-      "flickr",
       "facebook",
-      "youtube"
+      "youtube",
+      "flickr"
     ]
   },
   "Bergisch Gladbach": {
@@ -329,8 +342,8 @@
       "https://twitter.com/GemeindeBestwig"
     ],
     "all_channels": [
-      "twitter",
-      "facebook"
+      "facebook",
+      "twitter"
     ]
   },
   "Beverungen": {
@@ -356,9 +369,9 @@
       "www.bielefeld.de/de/pressedienst/rss-twitter.html"
     ],
     "all_channels": [
+      "facebook",
       "youtube",
       "twitter",
-      "facebook",
       "instagram"
     ]
   },
@@ -395,8 +408,8 @@
       "https://www.facebook.com/blomberglippe"
     ],
     "all_channels": [
-      "twitter",
-      "facebook"
+      "facebook",
+      "twitter"
     ]
   },
   "Bocholt": {
@@ -407,8 +420,8 @@
       "https://twitter.com/bocholter_city"
     ],
     "all_channels": [
-      "twitter",
-      "facebook"
+      "facebook",
+      "twitter"
     ]
   },
   "Bochum": {
@@ -421,9 +434,9 @@
       "https://www.instagram.com/bochum_de/"
     ],
     "all_channels": [
-      "instagram",
+      "youtube",
       "twitter",
-      "youtube"
+      "instagram"
     ]
   },
   "B\u00f6nen": {
@@ -442,10 +455,10 @@
       "http://www.flickr.com/bundesstadtbonn"
     ],
     "all_channels": [
-      "flickr",
-      "twitter",
       "facebook",
-      "youtube"
+      "youtube",
+      "twitter",
+      "flickr"
     ]
   },
   "Borchen": {
@@ -496,10 +509,10 @@
       "https://www.flickr.com/photos/bottrop/albums"
     ],
     "all_channels": [
+      "twitter",
       "facebook",
       "flickr",
       "youtube",
-      "twitter",
       "instagram"
     ]
   },
@@ -511,19 +524,13 @@
       "http://www.twitter.com/stadtbrakel"
     ],
     "all_channels": [
-      "twitter",
-      "facebook"
+      "facebook",
+      "twitter"
     ]
   },
   "Breckerfeld": {
-    "google": "https://play.google.com/store/apps/details?id=com.regioit.wahlapp&hl=de&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1",
-    "all_links": [
-      "https://play.google.com/store/apps/details?id=com.regioit.wahlapp&hl=de&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1",
-      "https://play.google.com/store/apps/details?id=com.regioit.wahlapp&hl=de&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
-    ],
-    "all_channels": [
-      "google"
-    ]
+    "all_links": [],
+    "all_channels": []
   },
   "Brilon": {
     "all_links": [],
@@ -537,13 +544,18 @@
       "https://twitter.com/GemeindeBruggen"
     ],
     "all_channels": [
-      "twitter",
-      "facebook"
+      "facebook",
+      "twitter"
     ]
   },
   "Br\u00fchl": {
-    "all_links": [],
-    "all_channels": []
+    "facebook": "https://www.facebook.com/stadtbruehl/",
+    "all_links": [
+      "https://www.facebook.com/stadtbruehl/"
+    ],
+    "all_channels": [
+      "facebook"
+    ]
   },
   "B\u00fcnde": {
     "all_links": [],
@@ -614,17 +626,11 @@
   "Dormagen": {
     "facebook": "http://www.facebook.com/Jugendbuero.Dormagen?ref=hl",
     "youtube": "http://www.youtube.com/watch?v=ZpHPANatyMw",
-    "google": "https://play.google.com/store/apps/details?id=com.regioit.wahlapp",
     "all_links": [
       "http://www.facebook.com/Jugendbuero.Dormagen?ref=hl",
-      "http://www.youtube.com/watch?v=ZpHPANatyMw",
-      "https://play.google.com/store/apps/details?id=de.maengelmelder.app",
-      "https://play.google.com/store/apps/details?id=tuerantuer.app.integreat",
-      "https://play.google.com/store/apps/details?id=cityguide.Dormagen",
-      "https://play.google.com/store/apps/details?id=com.regioit.wahlapp"
+      "http://www.youtube.com/watch?v=ZpHPANatyMw"
     ],
     "all_channels": [
-      "google",
       "facebook",
       "youtube"
     ]
@@ -647,9 +653,9 @@
       "https://www.youtube.com/watch?v=-MYOTKzlIjo"
     ],
     "all_channels": [
+      "facebook",
       "youtube",
       "twitter",
-      "facebook",
       "instagram"
     ]
   },
@@ -679,10 +685,10 @@
       "https://twitter.com/duisburg_de"
     ],
     "all_channels": [
-      "instagram",
-      "twitter",
       "facebook",
-      "youtube"
+      "youtube",
+      "twitter",
+      "instagram"
     ]
   },
   "D\u00fclmen": {
@@ -709,21 +715,18 @@
       "https://www.youtube.com/user/stadtduesseldorf"
     ],
     "all_channels": [
-      "twitter",
       "facebook",
-      "youtube"
+      "youtube",
+      "twitter"
     ]
   },
   "Eitorf": {
-    "google": "https://play.google.com/store/apps/details?id=de.bvbverlag.eitorf",
     "facebook": "https://de-de.facebook.com/pages/Gemeinde-Eitorf/193963740641895",
     "all_links": [
-      "https://play.google.com/store/apps/details?id=de.bvbverlag.eitorf",
       "https://de-de.facebook.com/pages/Gemeinde-Eitorf/193963740641895"
     ],
     "all_channels": [
-      "facebook",
-      "google"
+      "facebook"
     ]
   },
   "Elsdorf": {
@@ -745,9 +748,9 @@
       "http://www.youtube.com/user/emmericherbilderde"
     ],
     "all_channels": [
-      "twitter",
       "facebook",
-      "youtube"
+      "youtube",
+      "twitter"
     ]
   },
   "Emsdetten": {
@@ -839,10 +842,10 @@
       "https://instagram.com/essen_ruhr/"
     ],
     "all_channels": [
-      "instagram",
-      "twitter",
       "facebook",
-      "youtube"
+      "youtube",
+      "twitter",
+      "instagram"
     ]
   },
   "Euskirchen": {
@@ -862,19 +865,21 @@
     "all_channels": []
   },
   "Frechen": {
-    "all_links": [],
-    "all_channels": []
+    "facebook": "https://www.facebook.com/StadtFrechen",
+    "all_links": [
+      "https://www.facebook.com/StadtFrechen"
+    ],
+    "all_channels": [
+      "facebook"
+    ]
   },
   "Freudenberg": {
     "twitter": "https://twitter.com/FreibadFreudenb",
-    "google": "https://play.google.com/store/apps/details?id=de.bvbverlag.freudenberg&hl=de",
     "all_links": [
-      "https://twitter.com/FreibadFreudenb",
-      "https://play.google.com/store/apps/details?id=de.bvbverlag.freudenberg&hl=de"
+      "https://twitter.com/FreibadFreudenb"
     ],
     "all_channels": [
-      "twitter",
-      "google"
+      "twitter"
     ]
   },
   "Fr\u00f6ndenberg": {
@@ -900,8 +905,16 @@
     ]
   },
   "Geldern": {
-    "all_links": [],
-    "all_channels": []
+    "facebook": "https://www.facebook.com/stadtgeldern/",
+    "youtube": "https://www.youtube.com/channel/UCeiVPu06LbMlQVo2ElTUyhA",
+    "all_links": [
+      "https://www.facebook.com/stadtgeldern/",
+      "https://www.youtube.com/channel/UCeiVPu06LbMlQVo2ElTUyhA"
+    ],
+    "all_channels": [
+      "facebook",
+      "youtube"
+    ]
   },
   "Gelsenkirchen": {
     "gelsenkirchen": "https://www.gelsenkirchen.de/youtube",
@@ -946,11 +959,11 @@
       "https://www.xing.com/companies/stadtgladbeck"
     ],
     "all_channels": [
+      "twitter",
+      "xing",
       "facebook",
       "flickr",
-      "youtube",
-      "twitter",
-      "xing"
+      "youtube"
     ]
   },
   "Goch": {
@@ -969,10 +982,10 @@
       "https://twitter.com/RathausGrefrath"
     ],
     "all_channels": [
-      "flickr",
-      "twitter",
       "facebook",
-      "youtube"
+      "youtube",
+      "twitter",
+      "flickr"
     ]
   },
   "Greven": {
@@ -992,8 +1005,8 @@
       "https://twitter.com/grevenbroich"
     ],
     "all_channels": [
-      "twitter",
-      "facebook"
+      "facebook",
+      "twitter"
     ]
   },
   "Gronau (Westf.)": {
@@ -1022,13 +1035,18 @@
       "https://twitter.com/gummersbach_de"
     ],
     "all_channels": [
-      "twitter",
-      "facebook"
+      "facebook",
+      "twitter"
     ]
   },
   "G\u00fctersloh": {
-    "all_links": [],
-    "all_channels": []
+    "facebook": "https://www.facebook.com/StadtGutersloh",
+    "all_links": [
+      "https://www.facebook.com/StadtGutersloh"
+    ],
+    "all_channels": [
+      "facebook"
+    ]
   },
   "Haan": {
     "all_links": [],
@@ -1044,8 +1062,8 @@
       "https://instagram.com/hagen_westfalen"
     ],
     "all_channels": [
-      "twitter",
       "facebook",
+      "twitter",
       "instagram"
     ]
   },
@@ -1060,9 +1078,9 @@
       "https://www.youtube.com/watch?v=IuwYUyCiIG4"
     ],
     "all_channels": [
-      "instagram",
       "facebook",
-      "youtube"
+      "youtube",
+      "instagram"
     ]
   },
   "Hallenberg": {
@@ -1096,9 +1114,9 @@
       "https://www.youtube.com/channel/UCpJ3KgawbO5OTg1HUdL6iDA"
     ],
     "all_channels": [
-      "twitter",
       "facebook",
-      "youtube"
+      "youtube",
+      "twitter"
     ]
   },
   "Harsewinkel": {
@@ -1117,9 +1135,9 @@
       "https://vimeo.com/200877229"
     ],
     "all_channels": [
-      "vimeo",
       "facebook",
-      "youtube"
+      "youtube",
+      "vimeo"
     ]
   },
   "Havixbeck": {
@@ -1136,10 +1154,10 @@
       "http://www.youtube.com/embed/m4O8rVsrS3Q"
     ],
     "all_channels": [
-      "twitter",
       "google",
+      "youtube",
       "facebook",
-      "youtube"
+      "twitter"
     ]
   },
   "Heek": {
@@ -1216,8 +1234,8 @@
       "https://www.facebook.com/HennefJugendzentrum"
     ],
     "all_channels": [
-      "twitter",
       "facebook",
+      "twitter",
       "flickr"
     ]
   },
@@ -1240,9 +1258,9 @@
       "https://de-de.facebook.com/HerfordStadt"
     ],
     "all_channels": [
-      "twitter",
       "facebook",
-      "youtube"
+      "youtube",
+      "twitter"
     ]
   },
   "Herne": {
@@ -1255,9 +1273,9 @@
       "https://www.youtube.com/channel/UCbvUODXJS0fE2fkBnzXPXEA"
     ],
     "all_channels": [
-      "twitter",
       "facebook",
-      "youtube"
+      "youtube",
+      "twitter"
     ]
   },
   "Herscheid": {
@@ -1300,9 +1318,9 @@
       "https://twitter.com/stadthilden"
     ],
     "all_channels": [
-      "twitter",
       "facebook",
-      "youtube"
+      "youtube",
+      "twitter"
     ]
   },
   "Hille": {
@@ -1386,10 +1404,10 @@
       "https://www.instagram.com/mein.huenxe/"
     ],
     "all_channels": [
-      "instagram",
-      "twitter",
       "facebook",
-      "youtube"
+      "youtube",
+      "twitter",
+      "instagram"
     ]
   },
   "H\u00fcrtgenwald": {
@@ -1402,8 +1420,13 @@
     ]
   },
   "H\u00fcrth": {
-    "all_links": [],
-    "all_channels": []
+    "google": "www.huerth.de/vv/rathaus/dezernat1/buero_bm/presse/google_musterwiderspruch.pdf",
+    "all_links": [
+      "www.huerth.de/vv/rathaus/dezernat1/buero_bm/presse/google_musterwiderspruch.pdf"
+    ],
+    "all_channels": [
+      "google"
+    ]
   },
   "Ibbenb\u00fcren": {
     "all_links": [],
@@ -1469,21 +1492,21 @@
     "facebook": "http://www.facebook.com/pages/Gemeinde-Kalletal/104372422941303",
     "twitter": "http://twitter.com/#/gemkalletal",
     "flickr": "http://www.flickr.com/photos/gemeinde-kalletal",
-    "google": "http://news.google.com/news/url?sa=t&fd=R&ct2=de&usg=AFQjCNHVmPdAPGFQSG4bg46IOloml1DIng&clid=c3a7d30bb8a4878e06b80cf16b898331&ei=bHLPWfCtKozv6AT36rqYBg&url=http://www.lz.de/lippe/kalletal/21933665_Schlammlawine-in-Kalletal-Westorf-beschaeftigt-Rettungskraefte.html",
+    "google": "http://news.google.com/news/url?sa=t&fd=R&ct2=de&usg=AFQjCNGG9zPgE4MtJeCRJXBl8OIgYazQnQ&clid=c3a7d30bb8a4878e06b80cf16b898331&ei=2TPbWaioCoyM0wW0tomwBw&url=http://www.lz.de/lippe/kalletal/21941342_In-Kalletal-beginnt-schon-jetzt-die-Anmeldephase-fuer-das-neue-Schuljahr.html",
     "all_links": [
       "http://www.facebook.com/pages/Gemeinde-Kalletal/104372422941303",
       "http://twitter.com/#/gemkalletal",
       "http://www.flickr.com/photos/gemeinde-kalletal",
+      "http://news.google.com/news/url?sa=t&fd=R&ct2=de&usg=AFQjCNG13UUfOps5wAD-Qc0RD9hh-DD5OA&clid=c3a7d30bb8a4878e06b80cf16b898331&ei=GWzbWbiiJoK7WfX9rqgH&url=http://www.lz.de/lippe/kalletal/21942220_Rollerfahrer-geraet-in-Luedenhausen-in-den-Gegenverkehr.html",
+      "http://news.google.com/news/url?sa=t&fd=R&ct2=de&usg=AFQjCNG13UUfOps5wAD-Qc0RD9hh-DD5OA&clid=c3a7d30bb8a4878e06b80cf16b898331&ei=KXrbWZD6G4GdWfHQjaAO&url=http://www.lz.de/lippe/kalletal/21942220_Rollerfahrer-geraet-in-Luedenhausen-in-den-Gegenverkehr.html",
       "http://news.google.com/news/url?sa=t&fd=R&ct2=de&usg=AFQjCNGPdmLqa7h5zCKd7ujMF0N5uA8JwQ&clid=c3a7d30bb8a4878e06b80cf16b898331&cid=52780612944630&ei=CV7bWcnHCsSMWubthugP&url=http://www.presseportal.de/blaulicht/pm/12727/3755788",
-      "http://news.google.com/news/url?sa=t&fd=R&ct2=de&usg=AFQjCNGG9zPgE4MtJeCRJXBl8OIgYazQnQ&clid=c3a7d30bb8a4878e06b80cf16b898331&ei=2TPbWaioCoyM0wW0tomwBw&url=http://www.lz.de/lippe/kalletal/21941342_In-Kalletal-beginnt-schon-jetzt-die-Anmeldephase-fuer-das-neue-Schuljahr.html",
-      "http://news.google.com/news/url?sa=t&fd=R&ct2=de&usg=AFQjCNFYrKs0Au4EGpsPMObLi9ffahx38g&clid=c3a7d30bb8a4878e06b80cf16b898331&ei=9svXWeC8C8KoW76bj7AF&url=http://www.lz.de/lippe/kalletal/21940079_Trauer-um-den-Kalletaler-Kommunalpolitiker-Andreas-Erke.html",
-      "http://news.google.com/news/url?sa=t&fd=R&ct2=de&usg=AFQjCNFxFI2glrMk_Sg8rM_Lnf4uFmzj5A&clid=c3a7d30bb8a4878e06b80cf16b898331&ei=33fSWaiPPMGVWdPoroAJ&url=http://www.lz.de/lippe/kalletal/21935807_Taller-feiern-zuenftige-Party.html",
-      "http://news.google.com/news/url?sa=t&fd=R&ct2=de&usg=AFQjCNHVmPdAPGFQSG4bg46IOloml1DIng&clid=c3a7d30bb8a4878e06b80cf16b898331&ei=bHLPWfCtKozv6AT36rqYBg&url=http://www.lz.de/lippe/kalletal/21933665_Schlammlawine-in-Kalletal-Westorf-beschaeftigt-Rettungskraefte.html"
+      "http://news.google.com/news/url?sa=t&fd=R&ct2=de&usg=AFQjCNGPdmLqa7h5zCKd7ujMF0N5uA8JwQ&clid=c3a7d30bb8a4878e06b80cf16b898331&cid=52780612944630&ei=GWzbWbiiJoK7WfX9rqgH&url=http://www.presseportal.de/blaulicht/pm/12727/3755788",
+      "http://news.google.com/news/url?sa=t&fd=R&ct2=de&usg=AFQjCNGG9zPgE4MtJeCRJXBl8OIgYazQnQ&clid=c3a7d30bb8a4878e06b80cf16b898331&ei=2TPbWaioCoyM0wW0tomwBw&url=http://www.lz.de/lippe/kalletal/21941342_In-Kalletal-beginnt-schon-jetzt-die-Anmeldephase-fuer-das-neue-Schuljahr.html"
     ],
     "all_channels": [
-      "google",
-      "twitter",
       "facebook",
+      "twitter",
+      "google",
       "flickr"
     ]
   },
@@ -1497,18 +1520,17 @@
     ]
   },
   "Kamp-Lintfort": {
-    "facebook": "http://www.facebook.com/kamplintfort",
+    "all_links": [],
+    "all_channels": []
+  },
+  "Kempen": {
+    "facebook": "https://www.facebook.com/KempenamNiederrhein",
     "all_links": [
-      "http://www.facebook.com/kamplintfort",
-      "http://www.facebook.com/kamplintfort"
+      "https://www.facebook.com/KempenamNiederrhein"
     ],
     "all_channels": [
       "facebook"
     ]
-  },
-  "Kempen": {
-    "all_links": [],
-    "all_channels": []
   },
   "Kerken": {
     "all_links": [],
@@ -1523,15 +1545,8 @@
     "all_channels": []
   },
   "Kierspe": {
-    "facebook": "www.kierspe.de/de/aktuelles/bildung-kultur/2017-10-04-google-facebook-apple-die-macht-der-algorithmen.php",
-    "google": "www.kierspe.de/de/aktuelles/bildung-kultur/2017-10-04-google-facebook-apple-die-macht-der-algorithmen.php",
-    "all_links": [
-      "www.kierspe.de/de/aktuelles/bildung-kultur/2017-10-04-google-facebook-apple-die-macht-der-algorithmen.php"
-    ],
-    "all_channels": [
-      "facebook",
-      "google"
-    ]
+    "all_links": [],
+    "all_channels": []
   },
   "Kirchhundem": {
     "all_links": [],
@@ -1555,11 +1570,11 @@
       "http://www.flickr.com/photos/stadtkleve/"
     ],
     "all_channels": [
+      "twitter",
       "facebook",
       "flickr",
       "google",
-      "youtube",
-      "twitter"
+      "youtube"
     ]
   },
   "K\u00f6ln": {
@@ -1578,8 +1593,8 @@
       "http://twitter.com/home?status=http%3A%2F%2Fwww.stadt-koeln.de/index.html"
     ],
     "all_channels": [
-      "twitter",
-      "facebook"
+      "facebook",
+      "twitter"
     ]
   },
   "K\u00f6nigswinter": {
@@ -1600,8 +1615,22 @@
     "all_channels": []
   },
   "Krefeld": {
-    "all_links": [],
-    "all_channels": []
+    "flickr": "https://www.flickr.com/photos/stadt_krefeld/",
+    "youtube": "https://www.youtube.com/user/stadtkrefeld",
+    "twitter": "https://twitter.com/krefeldde",
+    "facebook": "https://www.facebook.com/krefeld",
+    "all_links": [
+      "https://www.flickr.com/photos/stadt_krefeld/",
+      "https://www.youtube.com/user/stadtkrefeld",
+      "https://twitter.com/krefeldde",
+      "https://www.facebook.com/krefeld"
+    ],
+    "all_channels": [
+      "facebook",
+      "youtube",
+      "twitter",
+      "flickr"
+    ]
   },
   "Kreuzau": {
     "all_links": [],
@@ -1638,13 +1667,8 @@
     "all_channels": []
   },
   "Langenfeld (Rhld.)": {
-    "google": "https://play.google.com/store/apps/details?id=net.net_com.langenfeld",
-    "all_links": [
-      "https://play.google.com/store/apps/details?id=net.net_com.langenfeld"
-    ],
-    "all_channels": [
-      "google"
-    ]
+    "all_links": [],
+    "all_channels": []
   },
   "Langerwehe": {
     "all_links": [],
@@ -1768,8 +1792,8 @@
       "http://twitter.com/stadtluegde"
     ],
     "all_channels": [
-      "twitter",
-      "facebook"
+      "facebook",
+      "twitter"
     ]
   },
   "L\u00fcnen": {
@@ -1777,8 +1801,8 @@
     "twitter": "http://www.twitter.com/home/?status=http://www.luenen.de/index.php",
     "all_links": [
       "https://www.facebook.com/MeinLuenen/",
+      "http://www.twitter.com/home/?status=http://www.luenen.de/10-10-003.php",
       "http://www.twitter.com/home/?status=http://www.luenen.de/digitaler_bildungspakt.php",
-      "http://www.twitter.com/home/?status=http://www.luenen.de/19-10-001.php",
       "http://www.twitter.com/home/?status=http://www.luenen.de/05-10-004.php",
       "http://www.twitter.com/home/?status=http://www.luenen.de/05-10-001.php",
       "http://www.twitter.com/home/?status=http://www.luenen.de/index.php",
@@ -1786,8 +1810,8 @@
       "https://www.facebook.com/MeinLuenen/"
     ],
     "all_channels": [
-      "twitter",
-      "facebook"
+      "facebook",
+      "twitter"
     ]
   },
   "Marienheide": {
@@ -1838,10 +1862,10 @@
     "all_channels": []
   },
   "Meinerzhagen": {
-    "twitter": "http://www.twitter.com/home/?status=http://www.meinerzhagen.de//aktuelle-infos/detailseite-aktuelles/news/ganz-im-zeichen-des-oktoberfests-herbstlicher-tanztee-am-16-oktober/?tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=28f2f06abdc6e8c077d3ea5cbe286d72 ",
+    "twitter": "http://www.twitter.com/home/?status=http://www.meinerzhagen.de//aktuelle-infos/detailseite-aktuelles/news/austauschschueler-aus-kolumbien-und-des-egm-besuchen-das-rathaus/?tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=79af24d5c1d7cb7708d84ace2c1e6e43 ",
     "all_links": [
-      "http://www.twitter.com/home/?status=http://www.meinerzhagen.de//aktuelle-infos/detailseite-aktuelles/news/wandertag-der-kommunen-oben-an-der-volme-anmeldung-fuer-bustransfer-noch-bis-zum-12-oktober-moegli/?tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=0955b0af5f57776020b20949cedafc05 ",
-      "http://www.twitter.com/home/?status=http://www.meinerzhagen.de//aktuelle-infos/detailseite-aktuelles/news/ganz-im-zeichen-des-oktoberfests-herbstlicher-tanztee-am-16-oktober/?tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=28f2f06abdc6e8c077d3ea5cbe286d72 "
+      "http://www.twitter.com/home/?status=http://www.meinerzhagen.de//fileadmin/user_upload/Meinerzhagen/Aktuelles/Aktuelles/Pressemitteilung/20171011_Ga_PM_Jubilaeum__Staedtepartnerschaft.pdf ",
+      "http://www.twitter.com/home/?status=http://www.meinerzhagen.de//aktuelle-infos/detailseite-aktuelles/news/austauschschueler-aus-kolumbien-und-des-egm-besuchen-das-rathaus/?tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=79af24d5c1d7cb7708d84ace2c1e6e43 "
     ],
     "all_channels": [
       "twitter"
@@ -1857,8 +1881,18 @@
     ]
   },
   "Merzenich": {
-    "all_links": [],
-    "all_channels": []
+    "vimeo": "www.gemeinde-merzenich.de/rathaus/vimeo.php",
+    "facebook": "https://www.facebook.com/Gemeinde-Merzenich-776028602503400/",
+    "all_links": [
+      "www.gemeinde-merzenich.de/rathaus/vimeo.php",
+      "www.gemeinde-merzenich.de/rathaus/vimeo.php",
+      "www.gemeinde-merzenich.de/rathaus/vimeo.php",
+      "https://www.facebook.com/Gemeinde-Merzenich-776028602503400/"
+    ],
+    "all_channels": [
+      "facebook",
+      "vimeo"
+    ]
   },
   "Hochsauerlandkreis": {
     "all_links": [],
@@ -1872,8 +1906,8 @@
       "https://twitter.com/StadtMeschede"
     ],
     "all_channels": [
-      "twitter",
-      "facebook"
+      "facebook",
+      "twitter"
     ]
   },
   "Metelen": {
@@ -1915,11 +1949,11 @@
       "https://www.flickr.com/photos/stadtmoers"
     ],
     "all_channels": [
+      "twitter",
       "facebook",
       "flickr",
       "google",
-      "youtube",
-      "twitter"
+      "youtube"
     ]
   },
   "M\u00f6hnesee": {
@@ -1930,8 +1964,8 @@
       "http://www.facebook.com/pages/M%C3%B6hnesee/185441558169786"
     ],
     "all_channels": [
-      "twitter",
-      "facebook"
+      "facebook",
+      "twitter"
     ]
   },
   "M\u00f6nchengladbach": {
@@ -1942,8 +1976,8 @@
       "https://twitter.com/PressestelleMG"
     ],
     "all_channels": [
-      "twitter",
-      "facebook"
+      "facebook",
+      "twitter"
     ]
   },
   "Monheim am Rhein": {
@@ -1959,9 +1993,9 @@
     ],
     "all_channels": [
       "xing",
-      "twitter",
       "facebook",
-      "youtube"
+      "youtube",
+      "twitter"
     ]
   },
   "Monschau": {
@@ -2006,9 +2040,9 @@
       "https://twitter.com/muenster_de"
     ],
     "all_channels": [
-      "twitter",
       "facebook",
-      "youtube"
+      "youtube",
+      "twitter"
     ]
   },
   "Nachrodt-Wiblingwerde": {
@@ -2041,9 +2075,9 @@
     ],
     "all_channels": [
       "xing",
-      "twitter",
       "facebook",
-      "youtube"
+      "youtube",
+      "twitter"
     ]
   },
   "Neuenkirchen": {
@@ -2085,9 +2119,9 @@
     ],
     "all_channels": [
       "facebook",
+      "youtube",
       "twitter",
-      "neuss",
-      "youtube"
+      "neuss"
     ]
   },
   "Rhein-Kreis Neuss": {
@@ -2096,7 +2130,7 @@
     "twitter": "https://twitter.com/rheinkreisneuss",
     "flickr": "https://www.flickr.com/photos/rkn013",
     "all_links": [
-      "https://www.facebook.com/229550370418183/posts/1683206061719266",
+      "https://www.facebook.com/229550370418183/posts/1686106271429245",
       "http://youtube.com/user/rheinkreisneuss",
       "http://www.twitter.com/rheinkreisneuss",
       "https://www.flickr.com/photos/rkn013/",
@@ -2107,15 +2141,21 @@
       "https://www.facebook.com/rheinkreisneuss"
     ],
     "all_channels": [
-      "flickr",
-      "twitter",
       "facebook",
-      "youtube"
+      "youtube",
+      "twitter",
+      "flickr"
     ]
   },
   "Nideggen": {
-    "all_links": [],
-    "all_channels": []
+    "facebook": "https://www.facebook.com/Stadt-Nideggen-136006840117924/",
+    "all_links": [
+      "https://www.facebook.com/Stadt-Nideggen-136006840117924/",
+      "https://www.facebook.com/Stadt-Nideggen-136006840117924/"
+    ],
+    "all_channels": [
+      "facebook"
+    ]
   },
   "Niederkassel": {
     "all_links": [],
@@ -2153,8 +2193,8 @@
       "https://de-de.facebook.com/pages/Schlossgemeinde-Nordkirchen/148958778602004"
     ],
     "all_channels": [
-      "twitter",
-      "facebook"
+      "facebook",
+      "twitter"
     ]
   },
   "Nordwalde": {
@@ -2186,8 +2226,8 @@
       "https://www.facebook.com/PolizeiOberhausen?fref=ts"
     ],
     "all_channels": [
-      "facebook",
-      "google"
+      "google",
+      "facebook"
     ]
   },
   "Ochtrup": {
@@ -2228,10 +2268,10 @@
       "https://www.facebook.com/olfen.tourismus"
     ],
     "all_channels": [
-      "instagram",
-      "twitter",
+      "google",
       "facebook",
-      "google"
+      "twitter",
+      "instagram"
     ]
   },
   "Olpe": {
@@ -2247,18 +2287,15 @@
     ]
   },
   "Olsberg": {
-    "youtube": "http://www.youtube.com/watch?feature=player_embedded&v=0u0VFLm-HOg",
     "facebook": "https://www.facebook.com/pages/Olsbergde/185968514902352?fref=nf",
     "twitter": "https://twitter.com/stadtolsberg",
     "all_links": [
-      "http://www.youtube.com/watch?feature=player_embedded&v=0u0VFLm-HOg",
       "https://www.facebook.com/pages/Olsbergde/185968514902352?fref=nf",
       "https://twitter.com/stadtolsberg"
     ],
     "all_channels": [
-      "twitter",
       "facebook",
-      "youtube"
+      "twitter"
     ]
   },
   "Ostbevern": {
@@ -2318,12 +2355,13 @@
       "http://twitter.com",
       "http://twitter.com",
       "http://twitter.com",
+      "http://twitter.com",
       "http://www.facebook.com/home.php?#!/pages/Stadtnetz-Radevormwald/116891075005137",
       "http://twitter.com/StadtnetzRade"
     ],
     "all_channels": [
-      "twitter",
-      "facebook"
+      "facebook",
+      "twitter"
     ]
   },
   "Raesfeld": {
@@ -2423,8 +2461,8 @@
       "https://drive.google.com/file/d/0Bw8mBt29J4ReeW0xdkt0RVZxMjA/view"
     ],
     "all_channels": [
-      "twitter",
       "facebook",
+      "twitter",
       "google"
     ]
   },
@@ -2551,8 +2589,14 @@
     ]
   },
   "Senden": {
-    "all_links": [],
-    "all_channels": []
+    "facebook": "www.gemeinde-senden.deaktuell/neuigkeiten/facebook/",
+    "all_links": [
+      "www.gemeinde-senden.deaktuell/neuigkeiten/facebook/",
+      "www.gemeinde-senden.deaktuell/neuigkeiten/facebook/"
+    ],
+    "all_channels": [
+      "facebook"
+    ]
   },
   "Sendenhorst": {
     "all_links": [],
@@ -2572,9 +2616,9 @@
       "https://www.youtube.com/user/KreisstadtSiegburg"
     ],
     "all_channels": [
-      "twitter",
       "facebook",
-      "youtube"
+      "youtube",
+      "twitter"
     ]
   },
   "Siegen-Wittgenstein": {
@@ -2588,8 +2632,8 @@
       "https://twitter.com/Kreis_SiWi"
     ],
     "all_channels": [
-      "twitter",
-      "facebook"
+      "facebook",
+      "twitter"
     ]
   },
   "Siegen": {
@@ -2637,8 +2681,13 @@
     "all_channels": []
   },
   "Steinhagen": {
-    "all_links": [],
-    "all_channels": []
+    "facebook": "https://www.facebook.com/#!/pages/Gemeinde-Steinhagen/215395801814820",
+    "all_links": [
+      "https://www.facebook.com/#!/pages/Gemeinde-Steinhagen/215395801814820"
+    ],
+    "all_channels": [
+      "facebook"
+    ]
   },
   "Steinheim": {
     "twitter": "https://twitter.com/stadt_steinheim",
@@ -2665,8 +2714,8 @@
       "https://twitter.com/Stadt_Straelen"
     ],
     "all_channels": [
-      "twitter",
-      "facebook"
+      "facebook",
+      "twitter"
     ]
   },
   "S\u00fcdlohn": {
@@ -2701,8 +2750,8 @@
       "https://twitter.com/Toenisvorst_de"
     ],
     "all_channels": [
-      "twitter",
-      "facebook"
+      "facebook",
+      "twitter"
     ]
   },
   "Troisdorf": {
@@ -2721,11 +2770,11 @@
       "https://www.xing.com/net/stadttroisdorf"
     ],
     "all_channels": [
+      "twitter",
+      "xing",
       "facebook",
       "flickr",
       "youtube",
-      "twitter",
-      "xing",
       "instagram"
     ]
   },
@@ -2745,8 +2794,8 @@
       "www.unna.de/kreisstadt+unna/imprint/facebook/"
     ],
     "all_channels": [
-      "twitter",
-      "facebook"
+      "facebook",
+      "twitter"
     ]
   },
   "Velbert": {
@@ -2767,24 +2816,53 @@
     "all_channels": []
   },
   "Versmold": {
-    "all_links": [],
-    "all_channels": []
+    "facebook": "https://de-de.facebook.com/stadtversmold",
+    "all_links": [
+      "https://de-de.facebook.com/stadtversmold"
+    ],
+    "all_channels": [
+      "facebook"
+    ]
   },
   "Vettwei\u00df": {
-    "all_links": [],
-    "all_channels": []
+    "facebook": "https://www.facebook.com/pages/Gemeinde-Vettwei%C3%9F/283517601724323?ref=stream",
+    "all_links": [
+      "https://www.facebook.com/pages/Gemeinde-Vettwei%C3%9F/283517601724323?ref=stream"
+    ],
+    "all_channels": [
+      "facebook"
+    ]
   },
   "Viersen": {
-    "all_links": [],
-    "all_channels": []
+    "facebook": "https://www.facebook.com/viersen.de",
+    "twitter": "https://www.twitter.com/StadtViersen",
+    "all_links": [
+      "https://www.facebook.com/viersen.de",
+      "https://www.twitter.com/StadtViersen"
+    ],
+    "all_channels": [
+      "facebook",
+      "twitter"
+    ]
   },
   "Vlotho": {
     "all_links": [],
     "all_channels": []
   },
   "Voerde (Niederrhein)": {
-    "all_links": [],
-    "all_channels": []
+    "twitter": "http://www.twitter.com/voerde_de",
+    "youtube": "http://www.youtube.com/stadtvoerde",
+    "google": "http://google.com/+stadtvoerde",
+    "all_links": [
+      "http://www.twitter.com/voerde_de",
+      "http://www.youtube.com/stadtvoerde",
+      "http://google.com/+stadtvoerde"
+    ],
+    "all_channels": [
+      "google",
+      "youtube",
+      "twitter"
+    ]
   },
   "Vreden": {
     "facebook": "https://www.facebook.com/Stadt-Vreden-1163643827000238/",
@@ -2844,9 +2922,9 @@
       "http://www.twitter.com/stadtwarendorf"
     ],
     "all_channels": [
-      "twitter",
-      "youtube",
       "facebook",
+      "youtube",
+      "twitter",
       "google"
     ]
   },
@@ -2863,13 +2941,8 @@
     "all_channels": []
   },
   "Wegberg": {
-    "youtube": "https://www.youtube.com/playlist?action_edit=1&list=PLv-6BNakeZfr0X93nmZwv4dbh5od2Pvl8",
-    "all_links": [
-      "https://www.youtube.com/playlist?action_edit=1&list=PLv-6BNakeZfr0X93nmZwv4dbh5od2Pvl8"
-    ],
-    "all_channels": [
-      "youtube"
-    ]
+    "all_links": [],
+    "all_channels": []
   },
   "Weilerswist": {
     "all_links": [],
@@ -2897,18 +2970,15 @@
     "all_channels": []
   },
   "Wermelskirchen": {
-    "google": "https://play.google.com/store/apps/details?id=com.goodbarber.wermelskirchen",
     "facebook": "http://www.facebook.com/stadtverwaltung.wermelskirchen",
     "twitter": "http://twitter.com/stadt_wk",
     "all_links": [
-      "https://play.google.com/store/apps/details?id=com.goodbarber.wermelskirchen",
       "http://www.facebook.com/stadtverwaltung.wermelskirchen",
       "http://twitter.com/stadt_wk"
     ],
     "all_channels": [
-      "twitter",
       "facebook",
-      "google"
+      "twitter"
     ]
   },
   "Werne": {
@@ -2924,8 +2994,22 @@
     "all_channels": []
   },
   "Wesseling": {
-    "all_links": [],
-    "all_channels": []
+    "youtube": "http://www.youtube.com/StadtWesseling",
+    "twitter": "https://twitter.com/Stadt_Wesseling",
+    "facebook": "https://www.facebook.com/stadtwesseling",
+    "all_links": [
+      "http://www.youtube.com/StadtWesseling",
+      "http://www.youtube.com/StadtWesseling",
+      "https://twitter.com/Stadt_Wesseling",
+      "https://twitter.com/Stadt_Wesseling",
+      "https://www.facebook.com/stadtwesseling",
+      "https://www.facebook.com/stadtwesseling"
+    ],
+    "all_channels": [
+      "facebook",
+      "youtube",
+      "twitter"
+    ]
   },
   "Westerkappeln": {
     "all_links": [],
@@ -2957,10 +3041,10 @@
       "http://google.com/+wiehl"
     ],
     "all_channels": [
+      "twitter",
       "facebook",
       "google",
       "youtube",
-      "twitter",
       "instagram"
     ]
   },
@@ -2972,8 +3056,8 @@
       "https://twitter.com/#!/WillebadessenHX"
     ],
     "all_channels": [
-      "twitter",
-      "facebook"
+      "facebook",
+      "twitter"
     ]
   },
   "Willich": {
@@ -2988,9 +3072,9 @@
       "https://www.youtube.com/user/stadtwillich"
     ],
     "all_channels": [
+      "facebook",
       "youtube",
       "twitter",
-      "facebook",
       "google"
     ]
   },
@@ -3023,10 +3107,10 @@
       "https://instagram.com/winterberg.de"
     ],
     "all_channels": [
+      "twitter",
       "facebook",
       "google",
       "youtube",
-      "twitter",
       "instagram"
     ]
   },
@@ -3035,23 +3119,23 @@
     "all_channels": []
   },
   "Witten": {
-    "twitter": "http://www.twitter.com/home/?status=http://www.witten.de/willkommen-in-witten/startseite/news-einzelansicht/news/musikschule-veranstaltet-im-haus-witten-eine-klangmeile-eintritt-ist-frei/?no_cache=1&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=ab800699bd8ef48f5083ae4dd0fdedd6 ",
+    "twitter": "http://www.twitter.com/home/?status=http://www.witten.de/willkommen-in-witten/startseite/news-einzelansicht/news/wittener-kindertreffs-feiern-herbstfest-im-steinbruch-imberg/?no_cache=1&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=10c189c29c27afbaaaa9c009b2429de5 ",
     "all_links": [
+      "http://www.twitter.com/home/?status=http://www.witten.de/willkommen-in-witten/startseite/news-einzelansicht/news/fairtrade-town-witten-waechst-37-geschaefte-11-gastronomien-2-kirchen-4-vereine-4-schulen-und-1/?no_cache=1&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=2b3ce026f14bc2d8e9fe6d1594575580 ",
+      "http://www.twitter.com/home/?status=http://www.witten.de/willkommen-in-witten/startseite/news-einzelansicht/news/maerkisches-museum-am-sonntag-um-15-uhr-gibts-eine-fuehrung-durch-die-aktuellen-ausstellungen/?no_cache=1&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=65ab6a4c09c5ca66877f88dfd8d0fcec ",
+      "http://www.twitter.com/home/?status=http://www.witten.de/willkommen-in-witten/startseite/news-einzelansicht/news/freier-eintritt-bei-der-klangmeile-im-haus-witten-spannt-die-musikschule-einen-grossen-musikalischen/?no_cache=1&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=b0d69237c9624545b750668e95857f2e ",
+      "http://www.twitter.com/home/?status=http://www.witten.de/willkommen-in-witten/startseite/news-einzelansicht/news/unterm-pusenkoff-vortrag-beleuchtet-picassos-guernica/?no_cache=1&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=f119e80d9db1d298d0d7e619c9f39c5a ",
+      "http://www.twitter.com/home/?status=http://www.witten.de/willkommen-in-witten/startseite/news-einzelansicht/news/der-weihnachtsmarkt-2017-ist-nicht-mehr-fern-stadtmarketing-laedt-ein-zur-schmueck-aktion/?no_cache=1&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=bab7411168e2b94610639139743e702a ",
+      "http://www.twitter.com/home/?status=http://www.witten.de/willkommen-in-witten/startseite/news-einzelansicht/news/ordnungsamt-kontrolliert-die-geschwindigkeit-26/?no_cache=1&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=68860e21a8369f5b2dbd3a4047c4464f ",
+      "http://www.twitter.com/home/?status=http://www.witten.de/willkommen-in-witten/startseite/news-einzelansicht/news/zum-letzten-mal-in-diesem-jahr-stadtmarketing-bietet-am-18-oktober-zwei-touren-mit-dem-cabriobus-a/?no_cache=1&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=3699c827d171de50f19f3e2af549fcd3 ",
+      "http://www.twitter.com/home/?status=http://www.witten.de/willkommen-in-witten/startseite/news-einzelansicht/news/23-amtsblatt-erscheint-am-donnerstag/?no_cache=1&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=cb4e915dc901636c3b7031fb72ff95a5 ",
       "http://www.twitter.com/home/?status=http://www.witten.de/willkommen-in-witten/startseite/news-einzelansicht/news/konferenz-der-partnerschaft-fuer-demokratie-soziologe-haelt-vortrag-ueber-rechtspopulismus/?no_cache=1&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=724c4b16bf96745fb3eb58ceb1dbec0e ",
       "http://www.twitter.com/home/?status=http://www.witten.de/willkommen-in-witten/startseite/news-einzelansicht/news/unternehmerinnentreff-jetzt-anmelden-fuer-den-zweiten-jahrestermin-am-18-oktober/?no_cache=1&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=bd6c39addbfdbc6ab4ae236279b20dd7 ",
       "http://www.twitter.com/home/?status=http://www.witten.de/willkommen-in-witten/startseite/news-einzelansicht/news/kreuzung-ardeystrassedortmunder-strasse-stillstand-im-strassenbau-haelt-an-weil-die-telekom-mehr-zeit/?no_cache=1&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=ba7743fdcacb222394eacb06ab1282bb ",
       "http://www.twitter.com/home/?status=http://www.witten.de/willkommen-in-witten/startseite/news-einzelansicht/news/freie-plaetze-bei-der-letzten-unter-tage-tour-des-jahres/?no_cache=1&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=926b1ba3e1799aa043ecf8e82bda1a1a ",
       "http://www.twitter.com/home/?status=http://www.witten.de/willkommen-in-witten/startseite/news-einzelansicht/news/kindertreffs-und-jugendeinrichtungen-jeden-tag-ist-was-los/?no_cache=1&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=9658c39e267c210f1a7a4d937cfecb42 ",
       "http://www.twitter.com/home/?status=http://www.witten.de/willkommen-in-witten/startseite/news-einzelansicht/news/springender-ziegenbock-aus-dem-stadtpark-gestohlen/?no_cache=1&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=b143cd8e9b79f1e78366b89216a133c0 ",
-      "http://www.twitter.com/home/?status=http://www.witten.de/willkommen-in-witten/startseite/news-einzelansicht/news/wittener-kindertreffs-feiern-herbstfest-im-steinbruch-imberg/?no_cache=1&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=10c189c29c27afbaaaa9c009b2429de5 ",
-      "http://www.twitter.com/home/?status=http://www.witten.de/willkommen-in-witten/startseite/news-einzelansicht/news/museum-packt-in-den-herbstferien-den-kulturrucksack-aus-experimente-mit-farben-und-siebdruck/?no_cache=1&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=4b9809a9d57a67037a82d8e0330d4f02 ",
-      "http://www.twitter.com/home/?status=http://www.witten.de/willkommen-in-witten/startseite/news-einzelansicht/news/nicht-verpassen-letzter-sonntagstroedel-des-jahres/?no_cache=1&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=07237276faa3e6f93baafbbc50c6a7ea ",
-      "http://www.twitter.com/home/?status=http://www.witten.de/willkommen-in-witten/startseite/news-einzelansicht/news/freundschaftsverein-laedt-zum-gespraech-unbekannter-osten-geschichte-landschaft-mythos/?no_cache=1&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=a8ec89772e24bd28870fa6d287560a94 ",
-      "http://www.twitter.com/home/?status=http://www.witten.de/willkommen-in-witten/startseite/news-einzelansicht/news/harald-kahl-praesentiert-im-museum-katalogbuch-zur-ausstellung-1/?no_cache=1&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=6d8d78a72e73b6bcb4cf97282d3acbec ",
-      "http://www.twitter.com/home/?status=http://www.witten.de/willkommen-in-witten/startseite/news-einzelansicht/news/buecher-cafe-au-lait-und-feines-gebaeck-bibliophiler-nachmittag-a-la-francaise/?no_cache=1&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=514d79ea0a708e2712cca64e3f066a25 ",
-      "http://www.twitter.com/home/?status=http://www.witten.de/willkommen-in-witten/startseite/news-einzelansicht/news/freie-plaetze-im-seminar-always-on-so-fuehren-sie-ihr-team-erfolgreich-durch-den-digitalen-wandel/?no_cache=1&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=5f5ec0bb62659d0c7f39a45d20f81c0f ",
-      "http://www.twitter.com/home/?status=http://www.witten.de/willkommen-in-witten/startseite/news-einzelansicht/news/mitten-in-der-kunst-foerderverein-maerkisches-museum-laedt-am-freitag-zum-museumsfest-ein/?no_cache=1&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=245497411328209b52a78050387efabf ",
-      "http://www.twitter.com/home/?status=http://www.witten.de/willkommen-in-witten/startseite/news-einzelansicht/news/musikschule-veranstaltet-im-haus-witten-eine-klangmeile-eintritt-ist-frei/?no_cache=1&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=ab800699bd8ef48f5083ae4dd0fdedd6 "
+      "http://www.twitter.com/home/?status=http://www.witten.de/willkommen-in-witten/startseite/news-einzelansicht/news/wittener-kindertreffs-feiern-herbstfest-im-steinbruch-imberg/?no_cache=1&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=10c189c29c27afbaaaa9c009b2429de5 "
     ],
     "all_channels": [
       "twitter"

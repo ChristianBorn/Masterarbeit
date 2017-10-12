@@ -17,15 +17,29 @@ from socket import error as SocketError
 from http.cookiejar import CookieJar
 
 
+
 def test_data():
     empty_entries = {}
+    new_list = {}
+    empty_counter = 0
+    not_empty_counter = 0
     with open('Social_Links.json', 'r') as file:
         collection = json.load(file)
     for key in collection:
         if not collection[key]['all_channels']:
             empty_entries[key] = collection[key]
+            empty_counter += 1
+        if collection[key]['all_channels']:
+            new_list[key] = collection[key]
+            not_empty_counter += 1
+    print('[+] Creating list with empty entries')
+    print(' Number of empty entries: '+str(empty_counter))
     with open('empty_entries.json', 'w') as file:
         json.dump(empty_entries, file, indent=2)
+    print('[+] Creating list without empty entries')
+    print(' Number of entries: '+str(not_empty_counter))
+    with open('Social_Links_filtered.json', 'w') as file:
+        json.dump(new_list, file, indent=2)
 
 def test_redirect():
     link = 'http://www.guetersloh.de'
@@ -45,7 +59,7 @@ def test_redirect():
 
 
 def main():
-    #test_data()    
-    test_redirect()
+    test_data()    
+    #test_redirect()
 if __name__ == '__main__':
     main()
