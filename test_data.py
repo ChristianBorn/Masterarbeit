@@ -110,7 +110,7 @@ def resolve_redirects():
     #                 print(link_extractor.get_url_by_selenium('https://'+collection[key][social_link_key]))
 
 def main():
-    #test_data()   
+    test_data()   
     resolve_redirects() 
     #test_redirect()
 if __name__ == '__main__':
