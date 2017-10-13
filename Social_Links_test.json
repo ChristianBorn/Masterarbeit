@@ -1,17 +1,17 @@
 {
   "Moers": {
-    "facebook": "http://www.ostbevern.de/kopfmenue/facebook/",
-    "google": "http://www.ostbevern.de/kopfmenue/google/",
-    "twitter": "http://www.ostbevern.de/kopfmenue/twitter/",
+    "facebook": "www.staatsbad-salzuflen.de/staatsbad-redirect/facebook.html",
+    "twitter": "www.staatsbad-salzuflen.de/staatsbad-redirect/twitter.html",
+    "youtube": "www.staatsbad-salzuflen.de/staatsbad-redirect/youtube.html",
     "all_links": [
-      "http://www.ostbevern.de/kopfmenue/facebook/",
-      "http://www.ostbevern.de/kopfmenue/google/",
-      "http://www.ostbevern.de/kopfmenue/twitter/"
+      "www.staatsbad-salzuflen.de/staatsbad-redirect/facebook.html",
+      "www.staatsbad-salzuflen.de/staatsbad-redirect/twitter.html",
+      "www.staatsbad-salzuflen.de/staatsbad-redirect/youtube.html"
     ],
     "all_channels": [
-      "facebook",
       "twitter",
-      "google"
+      "youtube",
+      "facebook"
     ]
   }
 }

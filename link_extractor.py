@@ -22,8 +22,10 @@ import analyse_data
 def check_social(string):
     if string == None:
         return False
-    if 'share' in string or 'github' in string or 'bootstrap' in string or 'tweet' in string or 'maps' in string or 'play' in string:
-        return False
+    forbidden_terms = ['embed', 'share', 'github', 'bootstrap', 'tweet', 'maps', 'play', 'javascript', 'translate', 'rss', 'datenschutzhinweis', 'neuigkeiten', 'googlemap', '.pdf', '.jpg', 'player_embedded']
+    for term in forbidden_terms:
+        if term in string:
+            return False
     social_channels_list = ['twitter', 'facebook', 'youtube', 'google', 
                             'flickr', 'plus.google', 'instagram',
                             'linkedin', 'xing', 'pinterest',
@@ -95,7 +97,7 @@ def get_links_test():
     print('[+] Done')
 def get_links():
     data = read_file()
-    #data = pandas.DataFrame({'Kommune/Kreis':'Moers','Internet':'www.ostbevern.de'}, index=[0])
+    #data = pandas.DataFrame({'Kommune/Kreis':'Moers','Internet':'www.staatsbad-salzuflen.de'}, index=[0])
     Kommunen = {}
     social_link_filter = SoupStrainer('a', {'href':check_social})
     counter = 0
@@ -109,6 +111,9 @@ def get_links():
     with open('errors.txt', 'w') as errorlog:
         errorlog.write('')
     for index, row in data.iterrows():
+        Kommunenchef_titel = row.loc['Titel HVB']
+        if Kommunenchef_titel.startswith('Land'):
+            continue
         counter += 1
         Kommune = row.loc['Kommune/Kreis']
         link = 'http://'+row.loc['Internet'].strip(' ')
@@ -123,6 +128,9 @@ def get_links():
             website = open_website(link)
         except:
             print('[-] Got invalid link')
+            error_num += 1
+            with open('errors.txt', 'a') as errorlog:
+                errorlog.write(Kommune+': '+link)
             try:
                 print('[+] Opening URL '+link_https)
                 website = open_website(link_https)
@@ -166,15 +174,20 @@ def get_links():
                     all_links.append(complete_link)
                 # Falls relativer Link, muss Domain vor den relativen Link gesetzt werden
                 else:
-                    complete_link = urlparse(link).hostname+link_href
-                    all_links.append(complete_link)
+                    if link_href.startswith('/'):
+                        complete_link = urlparse(link).hostname+link_href
+                        all_links.append(complete_link)
+                    else:
+                        complete_link = urlparse(link).hostname+'/'+link_href
+                        all_links.append(complete_link)
                 for elem in social_channels_list:
                     if elem in link_href:
                         links_dict[elem] = complete_link
                         all_channels.append(elem)
         print(' [+] Number of Links: '+str(len(all_links)))
         print(' [+] Number of Channels: '+str(len(all_channels)))
-        Kommunen[Kommune] = links_dict
+        Kommunen[Kommune] = {}
+        Kommunen[Kommune]['link_per_channel'] = links_dict
         Kommunen[Kommune]['all_links'] = all_links
         Kommunen[Kommune]['all_channels'] = list(set(all_channels))
     print('[+] Dumping to JSON')
