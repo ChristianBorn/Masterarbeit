@@ -19,6 +19,11 @@
     "all_links": [],
     "all_channels": []
   },
+  "Altenberge": {
+    "link_per_channel": {},
+    "all_links": [],
+    "all_channels": []
+  },
   "Anr\u00f6chte": {
     "link_per_channel": {},
     "all_links": [],
@@ -30,6 +35,11 @@
     "all_channels": []
   },
   "Bad Berleburg": {
+    "link_per_channel": {},
+    "all_links": [],
+    "all_channels": []
+  },
+  "Bad Honnef": {
     "link_per_channel": {},
     "all_links": [],
     "all_channels": []
@@ -429,11 +439,6 @@
     "all_links": [],
     "all_channels": []
   },
-  "Krefeld": {
-    "link_per_channel": {},
-    "all_links": [],
-    "all_channels": []
-  },
   "Kreuzau": {
     "link_per_channel": {},
     "all_links": [],
@@ -590,11 +595,6 @@
     "all_channels": []
   },
   "Minden": {
-    "link_per_channel": {},
-    "all_links": [],
-    "all_channels": []
-  },
-  "Moers": {
     "link_per_channel": {},
     "all_links": [],
     "all_channels": []
@@ -899,11 +899,6 @@
     "all_links": [],
     "all_channels": []
   },
-  "Sonsbeck": {
-    "link_per_channel": {},
-    "all_links": [],
-    "all_channels": []
-  },
   "Spenge": {
     "link_per_channel": {},
     "all_links": [],
@@ -985,11 +980,6 @@
     "all_channels": []
   },
   "Vlotho": {
-    "link_per_channel": {},
-    "all_links": [],
-    "all_channels": []
-  },
-  "Voerde (Niederrhein)": {
     "link_per_channel": {},
     "all_links": [],
     "all_channels": []

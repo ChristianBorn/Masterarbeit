@@ -23,9 +23,6 @@
   "Altena": {
     "facebook": "http://www.facebook.com/Altena.de"
   },
-  "Altenberge": {
-    "youtube": "http://www.youtube.com/embed/SF_mOgkujHs"
-  },
   "Arnsberg": {
     "twitter": "http://twitter.com/#!/Arnsbergaktuell",
     "facebook": "http://www.facebook.com/stadt.arnsberg"
@@ -39,9 +36,6 @@
   },
   "Bad Driburg": {
     "facebook": "https://www.facebook.com/pages/Stadt-Bad-Driburg/179648988787821"
-  },
-  "Bad Honnef": {
-    "youtube": "https://www.youtube.com/embed/iLKE5ZfBO-A"
   },
   "Bad Laasphe": {
     "youtube": "https://www.youtube.com/watch?v=t8Bvgz0ba44",
@@ -257,11 +251,10 @@
     "youtube": "https://www.youtube.com/channel/UCpJ3KgawbO5OTg1HUdL6iDA"
   },
   "Hattingen": {
-    "facebook": "https://www.facebook.com/Stadtverwaltung.Hattingen/posts/1026646687433764",
-    "youtube": "https://www.youtube.com/embed/OhQXRLJRY88"
+    "facebook": "https://www.facebook.com/Stadtverwaltung.Hattingen/posts/1026646687433764"
   },
   "Havixbeck": {
-    "youtube": "http://www.youtube.com/embed/m4O8rVsrS3Q",
+    "youtube": "http://www.youtube.com/user/GemeindeHavixbeck",
     "facebook": "http://www.facebook.com/GemeindeHavixbeck",
     "twitter": "https://twitter.com/GemHavixbeck"
   },
@@ -362,6 +355,11 @@
   "K\u00f6nigswinter": {
     "facebook": "http://www.facebook.com/stadt.koenigswinter"
   },
+  "Krefeld": {
+    "youtube": "https://www.youtube.com/user/stadtkrefeld",
+    "twitter": "https://twitter.com/krefeldde",
+    "facebook": "https://www.facebook.com/krefeld"
+  },
   "K\u00fcrten": {
     "facebook": "https://www.facebook.com/Gemeinde-K%C3%BCrten-616789995084422/timeline/"
   },
@@ -404,6 +402,11 @@
   },
   "Mettingen": {
     "facebook": "https://www.facebook.com/Gemeinde-Mettingen-1818484925059579/"
+  },
+  "Moers": {
+    "facebook": "https://www.facebook.com/stadtmoers",
+    "twitter": "https://twitter.com/Moers_de",
+    "youtube": "https://www.youtube.de/StadtMoers"
   },
   "M\u00f6hnesee": {
     "twitter": "http://www.twitter.com/moehnetouristik",
@@ -561,6 +564,10 @@
   "Viersen": {
     "facebook": "https://www.facebook.com/viersen.de",
     "twitter": "https://www.twitter.com/StadtViersen"
+  },
+  "Voerde (Niederrhein)": {
+    "twitter": "http://www.twitter.com/voerde_de",
+    "youtube": "http://www.youtube.com/stadtvoerde"
   },
   "Vreden": {
     "facebook": "https://www.facebook.com/Stadt-Vreden-1163643827000238/"
