@@ -94,7 +94,7 @@ def resolve_redirects():
                     print('[-] Link behind redirect is still invalid: ')
                     print(resolved_url)
                     continue
-    with open('Social_Links_final.json', 'w') as file:
+    with open('Daten/Social_Links_final.json', 'w') as file:
         json.dump(links_dict, file, indent=2)
     # for key in collection:
     #     print(key)

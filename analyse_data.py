@@ -27,7 +27,7 @@ def count_channels(filepath):
             channels.append(channel)
     counted_channels = dict(Counter(channels))
     counted_channels = helpers.sort_dict(counted_channels)
-    with open('Channel_count.json', 'w') as file:
+    with open('Daten/Channel_count.json', 'w') as file:
         json.dump(counted_channels, file, indent=2)
     print(counted_channels)
 
