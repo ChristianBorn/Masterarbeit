@@ -14,7 +14,7 @@ def extract_usernames():
     for key in collection:
         try:
             twitter_user = collection[key]['twitter'].split('/')[-1]
-            usernames[twitter_user] = {'last_tweet_date':'', 'last_tweet_id':''}
+            usernames[twitter_user] = {'last_tweet_date':'', 'last_tweet_id':'', 'city':key}
         except KeyError:
             continue
     with open('twitter_usernames.json', 'w') as file:

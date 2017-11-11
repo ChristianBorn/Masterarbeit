@@ -1,2 +1,1 @@
-id;created_at;text;source;in_reply_to_screen_name;is_quote_status;retweet_count;favorite_count;hashtags;retweeted_text;retweeted_user
-928669514526441472;2017-11-09 17:04:00;b'Gesch\xc3\xa4ftsleute \xc3\xa4u\xc3\x9fern sich zum vierten Bauabschnitt #ZiTi #Fu\xc3\x9fg\xc3\xa4ngerzone # https://t.co/upYR3G9Y6g';TweetDeck;;False;0;0;ZiTi,Fußgängerzone;;
+tweet_id;screenname;city;date;text;source;reply_to;is_quote;retweetet_count;favorited_count;hashtags;retweeted_text;retweeted_user

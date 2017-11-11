@@ -6,6 +6,7 @@ import csv
 import time
 import datetime
 import json
+from Database import database_interaction
 
 
 #Twitter API credentials
@@ -15,7 +16,7 @@ access_key = "407059263-rS77JdDpBxgoAEtj4lo9xaMYkkBMpbfrUDBbNH76"
 access_secret = "bg87yfK7tpc7llPQrAD5cwIJ6x73cp1wCpCw0QC5a2Pg1"
 
 
-def get_all_tweets(screen_name, newest, newest_date):
+def get_all_tweets(screen_name, newest, newest_date, city):
     #Twitter only allows access to a users most recent 3240 tweets with this method
     
     #authorize twitter, initialize tweepy
@@ -24,22 +25,23 @@ def get_all_tweets(screen_name, newest, newest_date):
     api = tweepy.API(auth)
     
     #initialize a list to hold all the tweepy Tweets
-    alltweets = []  
-    
+    alltweets = []
+    conn_objects = database_interaction.connect_to_db('../Database/main_data.db')
+    print(screen_name)
+    print('Last Tweet: '+str(newest))
+    print('Last Retrieved: '+str(newest_date))
     
     #make initial request for most recent tweets (200 is the maximum allowed count)
     if not newest:
         new_tweets_filtered = []
         new_tweets = api.user_timeline(screen_name = screen_name,count=30, tweet_mode="extended")
         for tweet in new_tweets:
-            print(screen_name)
-            print(tweet.full_text)
-            print(tweet.created_at)
             try:
-                print(tweet.retweeted_status)
-                print(tweet.retweeted_status.text)
+                if tweet.retweeted_status:
+                    print('Got retweet!!!')
+                    print(tweet.retweeted_status.created_at)
+                    print(tweet.retweeted_status.text)
             except AttributeError:
-                print('Error')
                 pass
             if tweet.created_at.date() == datetime.datetime.today().date():
                 new_tweets_filtered.append(tweet)
@@ -56,7 +58,6 @@ def get_all_tweets(screen_name, newest, newest_date):
     if alltweets:
         newest = alltweets[0].id
         newest_date = alltweets[0].created_at
-        print(newest)
     
         #keep grabbing tweets until there are no tweets left to grab
         while len(new_tweets) > 0:
@@ -78,7 +79,7 @@ def get_all_tweets(screen_name, newest, newest_date):
     #transform the tweepy tweets into a 2D array that will populate the csv 
     outtweets = []
     for tweet in alltweets:
-        helplist = [tweet.id_str, tweet.created_at, tweet.full_text.encode("utf-8"), tweet.source, tweet.in_reply_to_screen_name, tweet.is_quote_status, tweet.retweet_count, tweet.favorite_count]
+        helplist = [tweet.id_str, screen_name, city, tweet.created_at, tweet.full_text.encode("utf-8"), tweet.source, tweet.in_reply_to_screen_name, tweet.is_quote_status, tweet.retweet_count, tweet.favorite_count]
         if tweet.entities['hashtags']:
             hashtagstring = []
             for hashtag in tweet.entities['hashtags']:
@@ -97,32 +98,32 @@ def get_all_tweets(screen_name, newest, newest_date):
         except AttributeError:
             helplist.append(None)
             helplist.append(None)
+        # Inserting values in Database
+        database_interaction.insert_values_into("tweets", helplist, conn_objects['Connection'],conn_objects['Cursor'])
+        # Writing list for CSV output as check
         outtweets.append(helplist)
-        #outtweets = [[tweet.entities['hashtags']]
-    
-    # outtweets = [[tweet.id_str, tweet.created_at, tweet.text.encode("utf-8"), tweet.source, tweet.in_reply_to_screen_name, tweet.is_quote_status, tweet.retweet_count, tweet.favorite_count, tweet.entities['hashtags']] for tweet in alltweets]
-    # print(outtweets)
+
     #write the csv  
     with open('%s_tweets.csv' % screen_name, 'w', encoding='utf-8') as f:
         writer = csv.writer(f, delimiter=';')
-        writer.writerow(["id","created_at","text", "source", "in_reply_to_screen_name", "is_quote_status", "retweet_count", "favorite_count", "hashtags", "retweeted_text", "retweeted_user"])
+        writer.writerow(["tweet_id","screenname","city", "date", "text", "source", "reply_to", "is_quote", "retweetet_count", "favorited_count", "hashtags", "retweeted_text", "retweeted_user"])
         writer.writerows(outtweets)
-    return {'last_tweet_date':str(newest_date), 'last_tweet_id':newest}
+    return {'last_tweet_date':str(newest_date), 'last_tweet_id':newest, 'city':city}
 
 if __name__ == '__main__':
-    # with open('twitter_usernames.json', 'r') as file:
-    #     collection = json.load(file)
-    # for username in collection:
-    #     #pass in the username of the account you want to download
-    #     try:
-    #         new_entry = get_all_tweets(username, collection[username]['last_tweet_id'], collection[username]['last_tweet_date'])
-    #         collection[username] = new_entry
-    #     except TweepError:
-    #         print('Ran into an error')
-    #         time.sleep(5)
-    #         new_entry = get_all_tweets(username, collection[username]['last_tweet_id'], collection[username]['last_tweet_date'])
-    #         collection[username] = new_entry
-    # with open('twitter_usernames.json', 'w') as file:
-    #     json.dump(collection, file, indent=2)
+    with open('twitter_usernames.json', 'r') as file:
+        collection = json.load(file)
+    for username in collection:
+        #pass in the username of the account you want to download
+        try:
+            new_entry = get_all_tweets(username, collection[username]['last_tweet_id'], collection[username]['last_tweet_date'], collection[username]['city'])
+            collection[username] = new_entry
+        except TweepError:
+            print('Ran into an error')
+            time.sleep(5)
+            new_entry = get_all_tweets(username, collection[username]['last_tweet_id'], collection[username]['last_tweet_date'], collection[username]['city'])
+            collection[username] = new_entry
+    with open('twitter_usernames.json', 'w') as file:
+        json.dump(collection, file, indent=2)
 
-    new_entry = get_all_tweets("bochum_de", '', '')
+    #new_entry = get_all_tweets("bochum_de", '', '')

@@ -1,2 +1,1 @@
-id;created_at;text;source;in_reply_to_screen_name;is_quote_status;retweet_count;favorite_count;hashtags;retweeted_text;retweeted_user
-928675444999602176;2017-11-09 17:27:34;"b'""Treffpunkt Schule"" Infoveranstaltung zu den weiterf\xc3\xbchrenden Schulen https://t.co/p7pjcT9DR2 https://t.co/RnVsOmLzU0'";dlvr.it;;False;0;0;;;
+tweet_id;screenname;city;date;text;source;reply_to;is_quote;retweetet_count;favorited_count;hashtags;retweeted_text;retweeted_user
