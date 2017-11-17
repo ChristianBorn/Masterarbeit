@@ -11,8 +11,6 @@ def connect_to_db(db):
 def insert_values_into(table_name, value_list, conn, c):
     values_bracket = '('+(','.join(['?']*len(value_list)))+')'
     sql_statement = "INSERT INTO "+table_name+" VALUES "+values_bracket
-    print(sql_statement)
-    print(value_list)
     c.execute(sql_statement, value_list)
     conn.commit()
 

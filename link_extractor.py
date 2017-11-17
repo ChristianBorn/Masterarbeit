@@ -22,7 +22,7 @@ import analyse_data
 def check_social(string):
     if string == None:
         return False
-    forbidden_terms = ['embedded', 'embed', 'share', 'github', 'bootstrap', 'tweet', 'maps', 'play', 'javascript', 'translate', 'rss', 'datenschutzhinweis', 'neuigkeiten', 'googlemap', '.pdf', '.jpg', 'player_embedded']
+    forbidden_terms = ['embedded', 'embed', 'share', 'github', 'bootstrap', 'tweet', 'maps', 'play', 'javascript', 'translate', 'rss', 'datenschutzhinweis', 'neuigkeiten', 'googlemap', '.pdf', '.jpg', 'player_embedded', 'status', 'event']
     for term in forbidden_terms:
         if term in string:
             return False
