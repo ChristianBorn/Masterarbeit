@@ -1,0 +1,372 @@
+{
+  "presseamtaachen": {
+    "last_tweet_date": "2017-11-20 06:54:24",
+    "last_tweet_id": 932502369140649984,
+    "city": "Aachen"
+  },
+  "StadtAhaus": {
+    "last_tweet_date": "2017-11-20 09:37:06",
+    "last_tweet_id": 932543315853041666,
+    "city": "Ahaus"
+  },
+  "ahlen_de": {
+    "last_tweet_date": "2017-11-16 08:02:17",
+    "last_tweet_id": 931069899149103105,
+    "city": "Ahlen"
+  },
+  "GemAldenhoven": {
+    "last_tweet_date": "2017-11-20 08:06:18",
+    "last_tweet_id": 932520463682633728,
+    "city": "Aldenhoven"
+  },
+  "Arnsbergaktuell": {
+    "last_tweet_date": "2017-10-26 15:20:51",
+    "last_tweet_id": 923570126330482688,
+    "city": "Arnsberg"
+  },
+  "Ascheberg_Info": {
+    "last_tweet_date": "2017-10-27 07:55:48",
+    "last_tweet_id": 923820513809625089,
+    "city": "Ascheberg"
+  },
+  "rathausATTD": {
+    "last_tweet_date": "2017-11-20 10:26:32",
+    "last_tweet_id": 932555756041367552,
+    "city": "Attendorn"
+  },
+  "staatsbad_bs": {
+    "last_tweet_date": "2017-11-20 09:37:07",
+    "last_tweet_id": 932543316603953152,
+    "city": "Bad Salzuflen"
+  },
+  "Stadt_Bergheim": {
+    "last_tweet_date": "2017-11-17 14:00:08",
+    "last_tweet_id": 931522344299974657,
+    "city": "Bergheim"
+  },
+  "GemeindeBestwig": {
+    "last_tweet_date": "2017-11-14 11:59:50",
+    "last_tweet_id": 930404906334334978,
+    "city": "Bestwig"
+  },
+  "stadtbielefeld": {
+    "last_tweet_date": "2017-11-20 10:01:03",
+    "last_tweet_id": 932549342942105600,
+    "city": "Bielefeld"
+  },
+  "blomberglippe": {
+    "last_tweet_date": "2017-11-13 10:21:04",
+    "last_tweet_id": 930017661488128000,
+    "city": "Blomberg"
+  },
+  "bocholter_city": {
+    "last_tweet_date": "2017-11-20 11:41:03",
+    "last_tweet_id": 932574507499425792,
+    "city": "Bocholt"
+  },
+  "bochum_de": {
+    "last_tweet_date": "2017-11-20 11:30:32",
+    "last_tweet_id": 932571860780412928,
+    "city": "Bochum"
+  },
+  "bundesstadtbonn": {
+    "last_tweet_date": "2017-11-20 10:15:58",
+    "last_tweet_id": 932553093924958208,
+    "city": "Bonn"
+  },
+  "bottrop": {
+    "last_tweet_date": "2017-11-17 16:32:02",
+    "last_tweet_id": 931560570150518784,
+    "city": "Bottrop"
+  },
+  "stadtbrakel": {
+    "last_tweet_date": "2017-11-16 07:58:48",
+    "last_tweet_id": 931069024464752640,
+    "city": "Brakel"
+  },
+  "GemeindeBruggen": {
+    "last_tweet_date": "2017-11-15 13:14:10",
+    "last_tweet_id": 930786002788081664,
+    "city": "Br\u00fcggen"
+  },
+  "stadtdortmund": {
+    "last_tweet_date": "2017-11-20 11:15:14",
+    "last_tweet_id": 932568009486594048,
+    "city": "Dortmund"
+  },
+  "duisburg_de": {
+    "last_tweet_date": "2017-11-20 08:17:05",
+    "last_tweet_id": 932523177456164869,
+    "city": "Duisburg"
+  },
+  "duesseldorf": {
+    "last_tweet_date": "2017-11-20 08:04:03",
+    "last_tweet_id": 932519897703297025,
+    "city": "D\u00fcsseldorf"
+  },
+  "stadtemmerich": {
+    "last_tweet_date": "2017-11-16 23:49:32",
+    "last_tweet_id": 931308286103601152,
+    "city": "Emmerich am Rhein"
+  },
+  "Essen_Ruhr": {
+    "last_tweet_date": "2017-11-20 09:50:34",
+    "last_tweet_id": 932546703714111493,
+    "city": "Essen"
+  },
+  "FreibadFreudenb": {
+    "last_tweet_date": "2017-11-20 11:31:13",
+    "last_tweet_id": 932572033069867008,
+    "city": "Freudenberg"
+  },
+  "Stadt_Gladbeck": {
+    "last_tweet_date": "2017-11-20 10:08:13",
+    "last_tweet_id": 932551146362851335,
+    "city": "Gladbeck"
+  },
+  "RathausGrefrath": {
+    "last_tweet_date": "2017-11-20 11:14:09",
+    "last_tweet_id": 932567737569771520,
+    "city": "Grefrath"
+  },
+  "grevenbroich": {
+    "last_tweet_date": "2017-11-17 08:50:49",
+    "last_tweet_id": 931444502979637249,
+    "city": "Grevenbroich"
+  },
+  "gummersbach_de": {
+    "last_tweet_date": "2017-11-19 18:12:44",
+    "last_tweet_id": 932310687883382785,
+    "city": "Gummersbach"
+  },
+  "hagen_westfalen": {
+    "last_tweet_date": "2017-11-10 08:38:00",
+    "last_tweet_id": 928904561166770181,
+    "city": "Hagen"
+  },
+  "stadthamminkeln": {
+    "last_tweet_date": "2016-09-23 08:23:21",
+    "last_tweet_id": 779234687487209476,
+    "city": "Hamminkeln"
+  },
+  "GemHavixbeck": {
+    "last_tweet_date": "2017-11-15 13:58:36",
+    "last_tweet_id": 930797181098971137,
+    "city": "Havixbeck"
+  },
+  "stadthennef": {
+    "last_tweet_date": "2017-11-17 11:49:55",
+    "last_tweet_id": 931489575427608581,
+    "city": "Hennef (Sieg)"
+  },
+  "StadtHerford": {
+    "last_tweet_date": "2017-11-14 07:31:05",
+    "last_tweet_id": 930337275380097024,
+    "city": "Herford"
+  },
+  "Stadt_Herne": {
+    "last_tweet_date": "2017-11-17 11:11:32",
+    "last_tweet_id": 931479915425419264,
+    "city": "Herne"
+  },
+  "stadthilden": {
+    "last_tweet_date": "2017-11-17 09:22:23",
+    "last_tweet_id": 931452445644984320,
+    "city": "Hilden"
+  },
+  "meinhuenxe": {
+    "last_tweet_date": "2017-11-01 08:01:03",
+    "last_tweet_id": 925633771738722304,
+    "city": "H\u00fcnxe"
+  },
+  "gemkalletal": {
+    "last_tweet_date": "2017-08-16 13:03:42",
+    "last_tweet_id": 897806069900115968,
+    "city": "Kalletal"
+  },
+  "StadtKamen": {
+    "last_tweet_date": "2016-10-30 23:32:27",
+    "last_tweet_id": 792871819208306689,
+    "city": "Kamen"
+  },
+  "StadtKleve": {
+    "last_tweet_date": "2017-11-17 06:56:41",
+    "last_tweet_id": 931415781031792641,
+    "city": "Kleve"
+  },
+  "krefeldde": {
+    "last_tweet_date": "2017-11-20 07:31:12",
+    "last_tweet_id": 932511628918181888,
+    "city": "Krefeld"
+  },
+  "stadtluegde": {
+    "last_tweet_date": "2017-11-20 07:49:23",
+    "last_tweet_id": 932516207730790400,
+    "city": "L\u00fcgde"
+  },
+  "stadtmarl": {
+    "last_tweet_date": "2017-11-20 09:40:47",
+    "last_tweet_id": 932544238776213505,
+    "city": "Marl"
+  },
+  "StadtMeschede": {
+    "last_tweet_date": "2017-11-17 10:43:16",
+    "last_tweet_id": 931472802724663296,
+    "city": "Meschede"
+  },
+  "Moers_de": {
+    "last_tweet_date": "2017-11-18 18:40:29",
+    "last_tweet_id": 931955283391385601,
+    "city": "Moers"
+  },
+  "moehnetouristik": {
+    "last_tweet_date": "2017-11-10 12:45:16",
+    "last_tweet_id": 928966788280475650,
+    "city": "M\u00f6hnesee"
+  },
+  "PressestelleMG": {
+    "last_tweet_date": "2017-11-17 11:07:44",
+    "last_tweet_id": 931478959979663361,
+    "city": "M\u00f6nchengladbach"
+  },
+  "stadtmonheim": {
+    "last_tweet_date": "2017-11-20 10:23:06",
+    "last_tweet_id": 932554891008069632,
+    "city": "Monheim am Rhein"
+  },
+  "muelheim_ruhr": {
+    "last_tweet_date": "2017-11-17 15:33:10",
+    "last_tweet_id": 931545758242877440,
+    "city": "M\u00fclheim an der Ruhr"
+  },
+  "muenster_de": {
+    "last_tweet_date": "2017-11-20 09:20:04",
+    "last_tweet_id": 932539025365307392,
+    "city": "M\u00fcnster"
+  },
+  "nettetal_de": {
+    "last_tweet_date": "2017-11-17 12:13:16",
+    "last_tweet_id": 931495450301124608,
+    "city": "Nettetal"
+  },
+  "StadtNeuss": {
+    "last_tweet_date": "2017-11-17 12:30:23",
+    "last_tweet_id": 931499758753144832,
+    "city": "Neuss"
+  },
+  "GNordkirchen": {
+    "last_tweet_date": "2017-11-16 14:45:34",
+    "last_tweet_id": 931171390581067776,
+    "city": "Nordkirchen"
+  },
+  "OTourismus": {
+    "last_tweet_date": "2017-05-24 11:19:25",
+    "last_tweet_id": 867339248067895296,
+    "city": "Olfen"
+  },
+  "stadtolsberg": {
+    "last_tweet_date": "2017-11-15 09:11:26",
+    "last_tweet_id": 930724916898488321,
+    "city": "Olsberg"
+  },
+  "GOstbevern": {
+    "last_tweet_date": "2017-11-15 07:36:28",
+    "last_tweet_id": 930701014302380032,
+    "city": "Ostbevern"
+  },
+  "StadtnetzRade": {
+    "last_tweet_date": "2017-11-15 11:37:11",
+    "last_tweet_id": 930761595063537665,
+    "city": "Radevormwald"
+  },
+  "gemeinderoetgen": {
+    "last_tweet_date": "2017-11-17 08:24:03",
+    "last_tweet_id": 931437765580922880,
+    "city": "Roetgen"
+  },
+  "siegburgaktuell": {
+    "last_tweet_date": "2017-11-13 15:30:00",
+    "last_tweet_id": 930095409959186432,
+    "city": "Siegburg"
+  },
+  "stadt_steinheim": {
+    "last_tweet_date": "2017-08-15 06:50:46",
+    "last_tweet_id": 897349830707687425,
+    "city": "Steinheim"
+  },
+  "Stadt_Straelen": {
+    "last_tweet_date": "2017-02-03 11:08:10",
+    "last_tweet_id": 827473752443195393,
+    "city": "Straelen"
+  },
+  "Toenisvorst_de": {
+    "last_tweet_date": "2017-11-16 10:06:07",
+    "last_tweet_id": 931101062865604609,
+    "city": "T\u00f6nisvorst"
+  },
+  "stadt_troisdorf": {
+    "last_tweet_date": "2017-11-17 08:01:25",
+    "last_tweet_id": 931432068948594689,
+    "city": "Troisdorf"
+  },
+  "Kreisstadt_Unna": {
+    "last_tweet_date": "2017-11-05 18:41:31",
+    "last_tweet_id": 927244504591106051,
+    "city": "Unna"
+  },
+  "StadtViersen": {
+    "last_tweet_date": "2017-11-17 17:00:18",
+    "last_tweet_id": 931567686815010816,
+    "city": "Viersen"
+  },
+  "voerde_de": {
+    "last_tweet_date": "2017-11-20 10:12:59",
+    "last_tweet_id": 932552343698239488,
+    "city": "Voerde (Niederrhein)"
+  },
+  "gem_wachtberg": {
+    "last_tweet_date": "2017-11-15 07:08:31",
+    "last_tweet_id": 930693982966960130,
+    "city": "Wachtberg"
+  },
+  "stadtwarendorf": {
+    "last_tweet_date": "2017-11-17 13:04:34",
+    "last_tweet_id": 931508359693504512,
+    "city": "Warendorf"
+  },
+  "stadt_wk": {
+    "last_tweet_date": "2017-09-04 07:15:04",
+    "last_tweet_id": 904603704036339712,
+    "city": "Wermelskirchen"
+  },
+  "Stadt_Wesseling": {
+    "last_tweet_date": "2017-11-17 10:30:11",
+    "last_tweet_id": 931469510946811904,
+    "city": "Wesseling"
+  },
+  "stadtwiehl": {
+    "last_tweet_date": "2017-11-18 19:57:52",
+    "last_tweet_id": 931974758475943936,
+    "city": "Wiehl"
+  },
+  "WillebadessenHX": {
+    "last_tweet_date": "2017-11-18 11:17:27",
+    "last_tweet_id": 931843791480414208,
+    "city": "Willebadessen"
+  },
+  "stadt_willich": {
+    "last_tweet_date": "2017-11-16 09:41:59",
+    "last_tweet_id": 931094992533250048,
+    "city": "Willich"
+  },
+  "wilnsdorf": {
+    "last_tweet_date": "2017-11-20 12:31:21",
+    "last_tweet_id": 932587164906545152,
+    "city": "Wilnsdorf"
+  },
+  "winterberg": {
+    "last_tweet_date": "2017-11-09 20:10:33",
+    "last_tweet_id": 928716462067470336,
+    "city": "Winterberg"
+  }
+}

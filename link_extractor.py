@@ -5,24 +5,21 @@ import urllib.request
 from bs4 import BeautifulSoup
 from bs4 import SoupStrainer
 from urllib.parse import urlparse
-import requests
 import json
-import codecs
 import pandas
-#from requests.exceptions import HTTPError
-from urllib.error import HTTPError
-from socket import error as SocketError
 from http.cookiejar import CookieJar
-from time import sleep
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 import test_data
 import analyse_data
 
 def check_social(string):
     if string == None:
         return False
-    forbidden_terms = ['embedded', 'embed', 'share', 'github', 'bootstrap', 'tweet', 'maps', 'play', 'javascript', 'translate', 'rss', 'datenschutzhinweis', 'neuigkeiten', 'googlemap', '.pdf', '.jpg', 'player_embedded', 'status', 'event']
+    forbidden_terms = ['embedded', 'groups',
+                       'embed', 'share', 'github', 'bootstrap', 'tweet', 'maps',
+                       'play', 'javascript', 'translate', 'rss', 'datenschutzhinweis',
+                       'neuigkeiten', 'googlemap', '.pdf', '.jpg', 'player_embedded',
+                       'status', 'event', 'watch']
     for term in forbidden_terms:
         if term in string:
             return False
@@ -49,7 +46,6 @@ def read_file():
     # #print(read_input.iloc[0][:])
 
 def get_links_test():
-    #ToDo: Iteration über Dataframe
     data = pandas.DataFrame({'Kommune/Kreis':'Gütersloh','Internet':'www.guetersloh.de/'}, index=[0])
     Kommunen = {}
     social_link_filter = SoupStrainer('a', {'href':check_social})
@@ -99,6 +95,7 @@ def get_links():
     data = read_file()
     #data = pandas.DataFrame({'Kommune/Kreis':'Moers','Internet':'www.staatsbad-salzuflen.de'}, index=[0])
     Kommunen = {}
+    # ToDo: 'a' entfernen, um aucb Links in anderen Containern zu bekommen (z.B. bei Schwerte)
     social_link_filter = SoupStrainer('a', {'href':check_social})
     counter = 0
     check_num = data.shape[0]
@@ -209,7 +206,7 @@ def get_url_by_selenium(link):
     driver.close()
     return url
 def open_website(link):
-    website = urllib.request.Request(link,headers={'User-Agent' : "Magic Browser"})
+    website = urllib.request.Request(link, headers={'User-Agent' : "Magic Browser"})
     cj = CookieJar()
     opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cj))
     website = opener.open(website)

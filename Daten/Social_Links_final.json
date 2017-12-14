@@ -38,7 +38,6 @@
     "facebook": "https://www.facebook.com/pages/Stadt-Bad-Driburg/179648988787821"
   },
   "Bad Laasphe": {
-    "youtube": "https://www.youtube.com/watch?v=t8Bvgz0ba44",
     "facebook": "https://www.facebook.com/badlaasphe"
   },
   "Bad Salzuflen": {
@@ -62,7 +61,7 @@
   },
   "Bergkamen": {
     "facebook": "https://www.facebook.com/stadtverwaltungbergkamen",
-    "youtube": "https://www.youtube.com/watch?v=ArR3HEZJQes&feature=youtu.be"
+    "youtube": "https://www.youtube.com/channel/UCr6s0hZKen-urx5SxF4D1fQ"
   },
   "Bestwig": {
     "facebook": "https://www.facebook.com/pages/Bestwigde/508478065830614",
@@ -130,12 +129,12 @@
   },
   "Dormagen": {
     "facebook": "http://www.facebook.com/Jugendbuero.Dormagen?ref=hl",
-    "youtube": "http://www.youtube.com/watch?v=ZpHPANatyMw"
+    "youtube": "https://www.youtube.com/channel/UC85A90ak5TpPE9QT0EjJ1qg"
   },
   "Dortmund": {
     "twitter": "https://twitter.com/stadtdortmund",
     "facebook": "http://www.facebook.com/DortmundUeberrascht.Dich",
-    "youtube": "https://www.youtube.com/watch?v=-MYOTKzlIjo"
+    "youtube": "https://www.youtube.com/user/StadtDortmund"
   },
   "Drensteinfurt": {
     "facebook": "https://www.facebook.com/stadt.drensteinfurt/"
@@ -187,9 +186,6 @@
   "Freudenberg": {
     "twitter": "https://twitter.com/FreibadFreudenb"
   },
-  "Gangelt": {
-    "youtube": "http://www.youtube.com/watch?v=ZYlVY70U_kA"
-  },
   "Geilenkirchen": {
     "facebook": "http://www.facebook.com/stadt.geilenkirchen"
   },
@@ -221,9 +217,6 @@
     "facebook": "http://www.facebook.com/grevenbroich",
     "twitter": "https://twitter.com/grevenbroich"
   },
-  "Gronau (Westf.)": {
-    "youtube": "https://www.youtube.com/watch?v=BotAWTSdh4g&t=2s"
-  },
   "Gummersbach": {
     "facebook": "https://www.facebook.com/StadtGummersbach/",
     "twitter": "https://twitter.com/gummersbach_de"
@@ -237,7 +230,7 @@
   },
   "Halle (Westf.)": {
     "facebook": "https://www.facebook.com/Stadt.HalleWestfalen?ref=hl",
-    "youtube": "https://www.youtube.com/watch?v=IuwYUyCiIG4"
+    "youtube": "https://www.youtube.com/channel/UCey9MaweY93vzo8UIDnmQug"
   },
   "Hamm": {
     "facebook": "http://www.facebook.com/stadtverwaltunghamm"
@@ -274,9 +267,6 @@
   "Hennef (Sieg)": {
     "facebook": "https://www.facebook.com/HennefJugendzentrum",
     "twitter": "https://twitter.com/stadthennef"
-  },
-  "Herdecke": {
-    "youtube": "https://www.youtube.com/watch?v=TgbYMk8H4qA"
   },
   "Herford": {
     "twitter": "https://twitter.com/StadtHerford",
@@ -382,9 +372,6 @@
   "Meckenheim": {
     "facebook": "https://www.facebook.com/meckenheimde"
   },
-  "Medebach": {
-    "youtube": "https://www.youtube.com/watch?v=LKgFRYXNYns"
-  },
   "Menden (Sauerland)": {
     "facebook": "http://www.facebook.com/Stadt.Menden"
   },
@@ -449,8 +436,7 @@
     "facebook": "https://www.facebook.com/Stadt-Nideggen-136006840117924/"
   },
   "Niederkr\u00fcchten": {
-    "youtube": "https://www.youtube.com/channel/UCsTWok2NxdsO7h9noPQyAbQ",
-    "facebook": "https://www.facebook.com/groups/288465391555466/"
+    "youtube": "https://www.youtube.com/channel/UCsTWok2NxdsO7h9noPQyAbQ"
   },
   "Nordkirchen": {
     "twitter": "https://twitter.com/GNordkirchen",
@@ -510,7 +496,8 @@
     "facebook": "https://www.facebook.com/Schwalmtal"
   },
   "Schwerte": {
-    "youtube": "https://www.youtube.com/watch?v=GIbw1JjGPb0"
+    "facebook": "https://www.facebook.com/stadt.schwerte",
+    "twitter": "https://twitter.com/StadtSchwerte"
   },
   "Selm": {
     "facebook": "https://www.facebook.com/pages/Selm-Stadt-mit-Freiraum/1593708080904634"
@@ -541,7 +528,7 @@
   "Troisdorf": {
     "facebook": "https://www.facebook.com/StadtTroisdorf",
     "twitter": "https://twitter.com/stadt_troisdorf",
-    "youtube": "http://www.youtube.com/user/TroisdorfStadt?feature=mhum"
+    "youtube": "https://www.youtube.com/user/TroisdorfStadt"
   },
   "Unna": {
     "twitter": "https://twitter.com/Kreisstadt_Unna",

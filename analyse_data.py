@@ -22,16 +22,23 @@ def count_channels(filepath):
     channels = []
     with open(filepath, 'r') as file:
         contents = json.load(file)
-    for key in contents:
-        for channel in contents[key]['all_channels']:
-            channels.append(channel)
-    counted_channels = dict(Counter(channels))
-    counted_channels = helpers.sort_dict(counted_channels)
+    try:
+        for key in contents:
+            for channel in contents[key]['all_channels']:
+                channels.append(channel)
+        counted_channels = dict(Counter(channels))
+        counted_channels = helpers.sort_dict(counted_channels)
+    except KeyError:
+        for key in contents:
+            for channel in contents[key]:
+                channels.append(channel)
+        counted_channels = dict(Counter(channels))
+        counted_channels = helpers.sort_dict(counted_channels)
     with open('Daten/Channel_count.json', 'w') as file:
         json.dump(counted_channels, file, indent=2)
     print(counted_channels)
 
 def main():
-    count_channels('Social_Links_filtered.json')
+    count_channels('Daten/Social_Links_final.json')
 if __name__ == '__main__':
     main()

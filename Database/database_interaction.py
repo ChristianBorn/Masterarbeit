@@ -8,7 +8,7 @@ def connect_to_db(db):
     c = conn.cursor()
     return {'Connection':conn,'Cursor':c}
 
-def insert_values_into(table_name, value_list, conn, c):
+def insert_values_into(table_name: object, value_list: object, conn: object, c: object) -> object:
     values_bracket = '('+(','.join(['?']*len(value_list)))+')'
     sql_statement = "INSERT INTO "+table_name+" VALUES "+values_bracket
     c.execute(sql_statement, value_list)
