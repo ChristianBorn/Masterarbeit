@@ -8,11 +8,11 @@ def create_table_tweets():
     conn = sqlite3.connect('main_data.db')
     c = conn.cursor()
     c.execute('''DROP TABLE if exists tweets''')
-    #ToDo: Datenbank für Medien aus Tweets erweitern
+    print('[+] Creating table tweets')
     c.execute('''CREATE TABLE tweets
                 (tweet_id TEXT,
                 screenname TEXT,
-                municipality TEXT,
+                city TEXT,
                 creation_date TEXT,
                 tweet_text TEXT,
                 source TEXT,
@@ -23,11 +23,13 @@ def create_table_tweets():
                 hashtags TEXT,
                 retweeted_text TEXT,
                 retweeted_user TEXT,
-                is_retweet INTEGER
+                is_retweet INTEGER,
+                media_type TEXT,
+                media_count INTEGER
                 )''')
     conn.commit()
     conn.close()
-def create_table_fb_posts(path_to_db):
+def create_table_fb_posts(path_to_db='main_data.db'):
     conn = sqlite3.connect(path_to_db)
     c = conn.cursor()
     c.execute('''DROP TABLE if exists fb_posts''')
@@ -48,7 +50,7 @@ def create_table_fb_posts(path_to_db):
     )''')
     conn.commit()
     conn.close()
-def create_table_fb_comments(path_to_db):
+def create_table_fb_comments(path_to_db='main_data.db'):
     conn = sqlite3.connect(path_to_db)
     c = conn.cursor()
     c.execute('''DROP TABLE if exists fb_comments''')
@@ -78,12 +80,14 @@ def create_table_yt_videos():
     `title`	TEXT,
     `description`	TEXT,
     `comment_count`	INTEGER,
+    `commentable`	INTEGER,
     `tags`	TEXT,
     `category`	INTEGER,
     `view_count`	INTEGER,
     `likes_count`	INTEGER,
     `dislike_count`	INTEGER,
-    `favorite_count`	INTEGER
+    `favorite_count`	INTEGER,
+    `city` TEXT
 );''')
     conn.commit()
     conn.close()
@@ -92,3 +96,12 @@ def complete_setup():
     create_table_tweets()
     create_table_fb_posts()
     create_table_fb_comments()
+    create_table_yt_videos()
+
+
+def main():
+    complete_setup()
+
+
+if __name__ == '__main__':
+    main()

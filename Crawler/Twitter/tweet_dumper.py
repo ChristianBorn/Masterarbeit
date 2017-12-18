@@ -21,9 +21,9 @@ def insert_tweets_in_db(tweetlist, screen_name, city):
     print('[+] Inserting tweets in Database...')
     csv_list = []
     conn_objects = database_interaction.connect_to_db('../../Database/main_data.db')
-    #Todo: Medien extrahieren: tweet.entities['media'] enthält Medien als Liste; jedes Medium hat ein Attribut 'type'
     for tweet in tweetlist:
-        helplist = [tweet.id_str, screen_name, city, tweet.created_at, tweet.full_text.encode("utf-8"), tweet.source, tweet.in_reply_to_screen_name, tweet.is_quote_status, tweet.retweet_count, tweet.favorite_count]
+        helplist = [tweet.id_str, screen_name, city, tweet.created_at, tweet.full_text.encode("utf-8"), tweet.source,
+                    tweet.in_reply_to_screen_name, tweet.is_quote_status, tweet.retweet_count, tweet.favorite_count]
         if tweet.entities['hashtags']:
             hashtagstring = []
             for hashtag in tweet.entities['hashtags']:
@@ -45,6 +45,13 @@ def insert_tweets_in_db(tweetlist, screen_name, city):
             helplist.append(None)
             helplist.append(None)
             helplist.append(False)
+        try:
+            #Jeder Tweet kann jeweils nur Photos, ein Gif oder ein Video enthalten, keine Mischungen möglich
+            helplist.append(tweet.extended_entities['media'][0]['type'])
+            helplist.append(len(tweet.extended_entities['media']))
+        except AttributeError:
+            helplist.append(None)
+            helplist.append(0)
         # Inserting values in Database
         database_interaction.insert_values_into("tweets", helplist, conn_objects['Connection'],conn_objects['Cursor'])
         csv_list.append(helplist)
@@ -93,13 +100,14 @@ def get_all_tweets(screen_name, city):
 
     # transform the tweepy tweets into a 2D array that will populate the csv
     outtweets = insert_tweets_in_db(alltweets, screen_name, city)
-
     # write the csv
     date_for_filename = datetime.datetime.today().date()
     filename = screen_name + '_tweets_' + str(date_for_filename) + '.csv'
     with open('Backups/' + filename, 'w', encoding='utf-8') as f:
         writer = csv.writer(f)
-        writer.writerow(["tweet_id","screenname","city", "date", "text", "source", "reply_to", "is_quote", "retweetet_count", "favorited_count", "hashtags", "retweeted_text", "retweeted_user", "is_retweet"])
+        writer.writerow(["tweet_id","screenname","city", "date", "text", "source", "reply_to", "is_quote",
+                         "retweetet_count", "favorited_count", "hashtags", "retweeted_text", "retweeted_user",
+                         "is_retweet", "media_type", "media_count"])
         writer.writerows(outtweets)
     return {'last_tweet_date': str(newest_date), 'last_tweet_id': newest, 'city': city}
 
@@ -200,5 +208,5 @@ def call_crawler(initial=True):
         json.dump(collection, file, indent=2)
 
 if __name__ == '__main__':
-    call_crawler(initial=False)
+    call_crawler(initial=True)
     #get_all_tweets('presseamtaachen', 'Aachen')
