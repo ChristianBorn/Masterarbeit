@@ -2,8 +2,9 @@
 # -*- coding: utf-8 -*-
 
 from facepy import GraphAPI
+import datetime
 from time import sleep
-from facepy.exceptions import OAuthError
+from facepy.exceptions import OAuthError, FacebookError
 from urllib3.exceptions import ProtocolError
 import time
 import json
@@ -19,29 +20,28 @@ def get_posts_from_timeline(link, city):
     print('[+] Retrieving posts for: '+city)
     if link.startswith('https://de-de.'):
         link = link.replace('de-de.','')
-    conn_objects = database_interaction.connect_to_db('../../Database/Database Backup 22112017/main_data.db')
+    conn_objects = database_interaction.connect_to_db('../../Database/main_data.db')
     all_posts = []
     likes = {}
     all_commments = {}
     reactions = {}
     page = 1
     now_timestamp = str(int(time.time()))
-    graph = GraphAPI('EAALxHU6JEoYBALeQ9K7N0VTtW47kyqjmqeghYkAg6Ein58KLbLm8jJzbkNyEwq63D6UKjaNkMqPn37xr8oCP26MzmLZAQeKZB9Wr4RmJd0POwm35RCt7yhpRmRa5VCvFWNfmIcQD3R1NZBI4WxH0ZBS9ugBWccYZD')
+    graph = GraphAPI('EAALxHU6JEoYBAK61wx7SXZAVjQHJSa5bov9c2m78KbUPL2rmGu4gBy9wlgpoGJSO7gbjq5d8UHbXGZAd3mZB1ZBZAwZBgZA80w4W1wmSXxTWLqRUbkh9FcMUyrIYGFtZB5IZCxZCHnMU4nmvLfocYGXK4Rj01FIezO1fqWBLGDGqwXTQZDZD')
     user_id = graph.get(link, fields='id')['id']
     try:
         # 1508520726 is the timestamp for 20th October 2017
         #retrieved_posts = graph.get(user_id+'/posts', since='1508520726', until=now_timestamp, fields='id,created_time,message,comments,caption,description,shares,likes,reactions,type')
         retrieved_posts = graph.get(
             user_id + '/posts',
-            #ToDo: Medien aus Posts extrahieren
             fields='id,created_time,message,comments,caption,description,shares,likes,reactions,type')
-
-    except OAuthError as e:
+    except OAuthError:
         with open('errors.txt','a') as outlog:
             outlog.write(e+'\n')
-            outlog.write(city+' '+link+'\n')
+            outlog.write(city+' '+link+'\n'+'OAuthError\n')
         return
     all_posts.extend(retrieved_posts['data'])
+    # Iterieren über die Seiten der paginierten Antwort
     while(True):
         try:
             retrieved_posts = requests.get(retrieved_posts['paging']['next']).json()
@@ -51,6 +51,7 @@ def get_posts_from_timeline(link, city):
         except KeyError:
             print('Last Page retrieved')
             break
+
     print('Number of Posts retrieved: '+str(len(all_posts)))
     for post in all_posts:
         post_id = post['id']
@@ -112,6 +113,7 @@ def get_posts_from_timeline(link, city):
             description_to_be_added = post['description']
         except KeyError:
             description_to_be_added = None
+
         insert_list = [post['id'], user_id, city, post['created_time'],
                        message_to_be_added,
                        description_to_be_added,
@@ -136,33 +138,37 @@ def get_posts_from_timeline(link, city):
                                                         conn_objects['Cursor'])
 def main():
     # Reset the fb_posts and fb_comments tables
-    # database_setup.create_table_fb_posts('../../Database/main_data.db')
-    # database_setup.create_table_fb_comments('../../Database/main_data.db')
+    #database_setup.create_table_fb_posts('../../Database/main_data.db')
+    #database_setup.create_table_fb_comments('../../Database/main_data.db')
     with open('../../Daten/Social_Links_final.json', 'r') as file:
         link_dict = json.load(file)
-        # for city in link_dict:
-        #     try:
-        #         try:
-        #             get_posts_from_timeline(link_dict[city]['facebook'], city)
-        #         except ProtocolError:
-        #             sleep(10)
-        #             get_posts_from_timeline(link_dict[city]['facebook'], city)
-        #         except ProtocolError:
-        #             with open('errors.txt', 'a') as file:
-        #                 file.write(city + ' :' + link_dict[city]['facebook'] + '\n')
-        #             continue
-        #     except KeyError:
-        #         print('[-] '+city+' has no FB Link')
-        #     except:
-        #         with open('errors.txt', 'a') as file:
-        #             file.write(city + ' :' + link_dict[city]['facebook'] + '\n')
-        #         continue
+        for city in link_dict:
+            try:
+                try:
+                    get_posts_from_timeline(link_dict[city]['facebook'], city)
+                except ProtocolError:
+                    sleep(10)
+                    get_posts_from_timeline(link_dict[city]['facebook'], city)
+                except ProtocolError:
+                    with open('errors.txt', 'a') as file:
+                        file.write(city + ' :' + link_dict[city]['facebook'] + '\n')
+                    continue
+            except KeyError:
+                print('[-] '+city+' has no FB Link')
+            except FacebookError:
+                print('Facebook Rate Limit reached, sleeping for half an hour\n'+str(datetime.datetime.today().time().isoformat()))
+                sleep(1800)
+                get_posts_from_timeline(link_dict[city]['facebook'], city)
+            except Exception as e:
+                with open('errors.txt', 'a') as file:
+                    file.write(city + ' :' + link_dict[city]['facebook'] + '\n'+str(e)+'\n')
+                continue
     # get_posts_from_timeline(link_dict['Aachen']['facebook'],'Aachen')
     # get_posts_from_timeline(link_dict['Bielefeld']['facebook'], 'Bielefeld')
     # get_posts_from_timeline(link_dict['Düsseldorf']['facebook'], 'Düsseldorf')
-    get_posts_from_timeline(link_dict['Köln']['facebook'], 'Köln')
-    get_posts_from_timeline(link_dict['Münster']['facebook'], 'Münster')
-    get_posts_from_timeline(link_dict['Winterberg']['facebook'], 'Winterberg')
+    #get_posts_from_timeline(link_dict['Köln']['facebook'], 'Köln')
+    # get_posts_from_timeline(link_dict['Münster']['facebook'], 'Münster')
+    # get_posts_from_timeline(link_dict['Winterberg']['facebook'], 'Winterberg')
     #get_posts_from_timeline("http://www.facebook.com/pages/Aachen-Germany/Stadt-Aachen/175038754810#/pages/Aachen-Germany/Stadt-Aachen/175038754810?v=wall#/pages/Aachen-Germany/Stadt-Aachen/175038754810?v=wall",'Aachen')
 
 if __name__ == '__main__':
