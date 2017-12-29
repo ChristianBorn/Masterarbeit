@@ -1,1 +1,14 @@
 select municipality, count(*) as TotalCount from tweets group by municipality order by TotalCount desc;
+-> gibt Tweet-Anzahl pro Kommune aus
+
+SELECT * FROM fb_posts where message is null;
+-> Gibt Zeilen ohne message aus
+
+SELECT * FROM yt_videos where likes_count is null;
+-> Listet Videos auf, die keine Anzahl der Likes/Dislikes anzeigen
+
+SELECT * FROM yt_videos where commentable=0;
+-> Listet Videos auf, bei denen die Kommentarfunktion ausgeschaltet ist
+
+SELECT * FROM yt_videos where comment_count>0;
+-> Listet Videos auf, die mindestens einen Kommentar haben

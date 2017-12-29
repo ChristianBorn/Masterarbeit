@@ -51,12 +51,17 @@ def get_videos(link, city):
 
 
     search_results = youtube.search().list(channelId=channel_id, part='id,snippet', type='video').execute()
-    print('[+] Number of results retrieved: '+str(search_results['pageInfo']['totalResults']))
+    print('-- Number of results retrieved: '+str(search_results['pageInfo']['totalResults']))
     next_page = search_results['nextPageToken']
+    #Todo: Einzelne VideoIds nochmal mit videos.list abrufen und die komplette Description extrahieren https://developers.google.com/youtube/v3/docs/videos/list
     for elem in search_results['items']:
+        description = elem['snippet']['description']
+        # Check if description is empty
+        if not description:
+            description = None
         videos_data[elem['id']['videoId']] = {'creation_date': elem['snippet']['publishedAt'],
                                          'title': elem['snippet']['title'],
-                                         'description': elem['snippet']['description']}
+                                         'description': description}
         # print(elem['id']['videoId'])
         # print(elem['snippet'])
     while next_page != 'last_page':
@@ -64,9 +69,13 @@ def get_videos(link, city):
             search_results = youtube.search().list(channelId=channel_id, part='id,snippet', type='video', pageToken=next_page).execute()
             next_page = search_results['nextPageToken']
             for elem in search_results['items']:
+                description = elem['snippet']['description']
+                # Check if description is empty
+                if not description:
+                    description = None
                 videos_data[elem['id']['videoId']] = {'creation_date': elem['snippet']['publishedAt'],
-                                                 'title': elem['snippet']['title'],
-                                                 'desctiption': elem['snippet']['description']}
+                                                      'title': elem['snippet']['title'],
+                                                      'description': description}
         except KeyError:
             break
     for video_id in videos_data:
@@ -83,13 +92,11 @@ def get_videos(link, city):
         except HttpError:
             videos_data[video_id]['commentable'] = False
             videos_data[video_id]['comment_count'] = 0
-        print(videos_data[video_id]['commentable'])
         results_videos = youtube.videos().list(id=video_id, part='id,snippet,statistics', pageToken=None).execute()
         for elem in results_videos['items']:
             try:
                 videos_data[video_id]['tags'] = ','.join(elem['snippet']['tags'])
             except KeyError:
-                print('No tags assigned')
                 videos_data[video_id]['tags'] = None
                 pass
             videos_data[video_id]['category'] = elem['snippet']['categoryId']
@@ -109,7 +116,7 @@ def get_videos(link, city):
             if attribute != 'comments':
                 insert_list.append(videos_data[video_id][attribute])
         insert_list.append(city)
-        print(insert_list)
+        print('Inserting in Database...')
         database_interaction.insert_values_into('yt_videos',insert_list,conn_objects['Connection'],
                                                         conn_objects['Cursor'])
     #print(search_results['items'])
