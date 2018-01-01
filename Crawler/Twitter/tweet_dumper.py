@@ -208,5 +208,5 @@ def call_crawler(initial=True):
         json.dump(collection, file, indent=2)
 
 if __name__ == '__main__':
-    call_crawler(initial=True)
+    call_crawler(initial=False)
     #get_all_tweets('presseamtaachen', 'Aachen')

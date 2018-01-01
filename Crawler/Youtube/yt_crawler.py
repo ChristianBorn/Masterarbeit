@@ -55,13 +55,8 @@ def get_videos(link, city):
     next_page = search_results['nextPageToken']
     #Todo: Einzelne VideoIds nochmal mit videos.list abrufen und die komplette Description extrahieren https://developers.google.com/youtube/v3/docs/videos/list
     for elem in search_results['items']:
-        description = elem['snippet']['description']
-        # Check if description is empty
-        if not description:
-            description = None
         videos_data[elem['id']['videoId']] = {'creation_date': elem['snippet']['publishedAt'],
-                                         'title': elem['snippet']['title'],
-                                         'description': description}
+                                         'title': elem['snippet']['title']}
         # print(elem['id']['videoId'])
         # print(elem['snippet'])
     while next_page != 'last_page':
@@ -69,16 +64,18 @@ def get_videos(link, city):
             search_results = youtube.search().list(channelId=channel_id, part='id,snippet', type='video', pageToken=next_page).execute()
             next_page = search_results['nextPageToken']
             for elem in search_results['items']:
-                description = elem['snippet']['description']
-                # Check if description is empty
-                if not description:
-                    description = None
                 videos_data[elem['id']['videoId']] = {'creation_date': elem['snippet']['publishedAt'],
-                                                      'title': elem['snippet']['title'],
-                                                      'description': description}
+                                                      'title': elem['snippet']['title']}
         except KeyError:
             break
     for video_id in videos_data:
+        # Retrieving a single video by video ID to get full description text
+        single_video = youtube.videos().list(id=video_id, part='snippet').execute()
+        description = single_video['items'][0]['snippet']['description']
+        # Check if description is empty
+        if not description or description == ' ':
+            description = None
+        videos_data[video_id]['description'] = description
         try:
             results_comments = youtube.commentThreads().list(videoId=video_id, part='id,snippet').execute()
             #comment_thread_id = results_comments['id']
@@ -113,9 +110,11 @@ def get_videos(link, city):
         for attribute in videos_data[video_id]:
             if type(videos_data[video_id][attribute]) == list and len(videos_data[video_id][attribute]) == 0:
                 videos_data[video_id][attribute] = None
+            # Skipping comments, can be inserted separately
             if attribute != 'comments':
                 insert_list.append(videos_data[video_id][attribute])
         insert_list.append(city)
+        print(insert_list)
         print('Inserting in Database...')
         database_interaction.insert_values_into('yt_videos',insert_list,conn_objects['Connection'],
                                                         conn_objects['Cursor'])
