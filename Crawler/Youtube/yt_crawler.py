@@ -53,7 +53,6 @@ def get_videos(link, city):
     search_results = youtube.search().list(channelId=channel_id, part='id,snippet', type='video').execute()
     print('-- Number of results retrieved: '+str(search_results['pageInfo']['totalResults']))
     next_page = search_results['nextPageToken']
-    #Todo: Einzelne VideoIds nochmal mit videos.list abrufen und die komplette Description extrahieren https://developers.google.com/youtube/v3/docs/videos/list
     for elem in search_results['items']:
         videos_data[elem['id']['videoId']] = {'creation_date': elem['snippet']['publishedAt'],
                                          'title': elem['snippet']['title']}

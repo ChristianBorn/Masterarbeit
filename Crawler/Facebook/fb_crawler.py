@@ -113,7 +113,7 @@ def get_posts_from_timeline(link, city):
             description_to_be_added = post['description']
         except KeyError:
             description_to_be_added = None
-
+        #Todo: created_date mit dateutil.parser.parse() umformatieren
         insert_list = [post['id'], user_id, city, post['created_time'],
                        message_to_be_added,
                        description_to_be_added,
