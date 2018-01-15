@@ -57,14 +57,16 @@ def get_videos(link, city):
         videos_data[elem['id']['videoId']] = {'creation_date': elem['snippet']['publishedAt'],
                                          'title': elem['snippet']['title']}
         # print(elem['id']['videoId'])
-        # print(elem['snippet'])
-    while next_page != 'last_page':
+    last_page = False
+    while last_page == False:
         try:
             search_results = youtube.search().list(channelId=channel_id, part='id,snippet', type='video', pageToken=next_page).execute()
             next_page = search_results['nextPageToken']
             for elem in search_results['items']:
                 videos_data[elem['id']['videoId']] = {'creation_date': elem['snippet']['publishedAt'],
                                                       'title': elem['snippet']['title']}
+            if next_page == 'last_page':
+                last_page = True
         except KeyError:
             break
     for video_id in videos_data:

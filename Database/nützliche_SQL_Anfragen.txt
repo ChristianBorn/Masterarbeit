@@ -12,3 +12,27 @@ SELECT * FROM yt_videos where commentable=0;
 
 SELECT * FROM yt_videos where comment_count>0;
 -> Listet Videos auf, die mindestens einen Kommentar haben
+
+select ( select count(*) from tweets )
+     + ( select count(*) from fb_posts ) 
+	 + ( select count(*) from yt_videos ) 
+          as total_rows
+-> Alle Zeilen addiert
+
+SELECT city, count(city) from tweets 
+                             WHERE date(creation_date)<date('2017-12-23 07:00:00') AND date(creation_date)>date('2008-05-13 10:18:35')
+                             GROUP BY city ORDER BY count(city) desc;
+
+
+SELECT city, count(city) from fb_posts 
+                             WHERE date(creation_date)<date('2017-12-23 07:00:00') AND date(creation_date)>date('2008-05-13 10:18:35')
+                             GROUP BY city ORDER BY count(city) desc;
+
+SELECT city, count(city) from yt_videos 
+                             WHERE date(creation_date)<date('2017-12-23 07:00:00') AND date(creation_date)>date('2008-05-13 10:18:35')
+                             GROUP BY city ORDER BY count(city) desc;
+
+SELECT strftime('%Y', creation_date) as years, count(strftime('%Y', creation_date)) counted_years from fb_posts 
+                             WHERE date(creation_date)<date('2017-12-23 07:00:00') AND date(creation_date)>date('2008-05-13 10:18:35')
+                             GROUP BY years ORDER BY years;
+

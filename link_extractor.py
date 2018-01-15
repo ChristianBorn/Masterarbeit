@@ -45,52 +45,7 @@ def read_file():
     #     print(row.loc['Kommune/Kreis'])
     # #print(read_input.iloc[0][:])
 
-def get_links_test():
-    data = pandas.DataFrame({'Kommune/Kreis':'Gütersloh','Internet':'www.guetersloh.de/'}, index=[0])
-    Kommunen = {}
-    social_link_filter = SoupStrainer('a', {'href':check_social})
-    for index, row in data.iterrows():
-        Kommune = row.loc['Kommune/Kreis']
-        link = 'http://'+row.loc['Internet']
-        print('[+] Getting Links for '+Kommune)
-        links_dict = {}
-        all_links = []
-        all_channels = []
-        print('[+] Opening URL '+link)
-        req = urllib.request.Request(link)
-        opener = urllib.request.build_opener()
-        #website = urllib.request.urlopen(req)
-        website = opener.open(req)
-        print(BeautifulSoup(website).a)
-        social_links = BeautifulSoup(website, 'html.parser',parse_only=social_link_filter)
-        for social_link in social_links:
-            link_href = social_link.get('href')
-            parsed_uri = urlparse(link_href)
-            try:
-                domain = parsed_uri.hostname.split('.')[-2]
-                links_dict[domain] = link_href
-                all_links.append(link_href)
-                all_channels.append(domain)
-            except AttributeError:
-                complete_link = urlparse(link).hostname+link_href
-                all_links.append(complete_link)
-                social_channels_list = ['twitter', 'facebook', 'youtube', 'google', 
-                            'flickr', 'plus.google', 'instagram',
-                            'linkedin', 'xing', 'pinterest',
-                            'vimeo', 'foursquare', 'tumblr']
-                for elem in social_channels_list:
-                    if elem in link_href:
-                        links_dict[elem] = complete_link
-                        all_channels.append(elem)
-        print(' [+] Number of Links: '+str(len(all_links)))
-        print(' [+] Number of Channels: '+str(len(all_channels)))
-        Kommunen[Kommune] = links_dict
-        Kommunen[Kommune]['all_links'] = all_links
-        Kommunen[Kommune]['all_channels'] = list(set(all_channels))
-    print('[+] Dumping to JSON')
-    with open('Social_Links_test.json', 'w') as file:
-        json.dump(Kommunen, file, indent=2)
-    print('[+] Done')
+
 def get_links():
     data = read_file()
     #data = pandas.DataFrame({'Kommune/Kreis':'Moers','Internet':'www.staatsbad-salzuflen.de'}, index=[0])
