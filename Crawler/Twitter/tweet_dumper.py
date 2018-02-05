@@ -6,6 +6,7 @@ import csv
 import time
 import datetime
 import json
+import sqlite3
 from Database import database_interaction
 from tweepy.error import TweepError
 

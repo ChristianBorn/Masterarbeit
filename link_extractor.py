@@ -19,7 +19,7 @@ def check_social(string):
                        'embed', 'share', 'github', 'bootstrap', 'tweet', 'maps',
                        'play', 'javascript', 'translate', 'rss', 'datenschutzhinweis',
                        'neuigkeiten', 'googlemap', '.pdf', '.jpg', 'player_embedded',
-                       'status', 'event', 'watch']
+                       'status', 'event', 'watch', 'status']
     for term in forbidden_terms:
         if term in string:
             return False

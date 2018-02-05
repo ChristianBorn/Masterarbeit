@@ -36,3 +36,78 @@ SELECT strftime('%Y', creation_date) as years, count(strftime('%Y', creation_dat
                              WHERE date(creation_date)<date('2017-12-23 07:00:00') AND date(creation_date)>date('2008-05-13 10:18:35')
                              GROUP BY years ORDER BY years;
 
+SELECT tweet_id, city, tweet_text, media_type, retweeted_count FROM tweets WHERE is_retweet=0 ORDER BY retweeted_count desc;
+
+
+SELECT city, sum(favorited_count) from tweets 
+                             WHERE date(creation_date)<date('2017-12-23 07:00:00') AND date(creation_date)>date('2008-05-13 10:18:35') AND is_retweet=0
+                             GROUP BY city ORDER BY sum(favorited_count) desc;
+-> Gibt Anzahl Reaktionen pro Gemeinde aus
+
+SELECT strftime('%Y', creation_date) as years, sum(comment_count), sum(shares_count), sum(reactions_count) from fb_posts 
+                             WHERE date(creation_date)<date('2017-12-23 07:00:00') AND date(creation_date)>date('2008-05-13 10:18:35')
+                             GROUP BY years ORDER BY years;
+
+SELECT strftime('%Y', creation_date) as years, sum(comment_count), sum(likes_count), sum(dislike_count), sum(favorite_count), sum(view_count) from yt_videos 
+                             WHERE date(creation_date)<date('2017-12-23 07:00:00') AND date(creation_date)>date('2008-05-13 10:18:35')
+                             GROUP BY years ORDER BY years;
+-> Gibt Anzahl Reaktionen pro Jahr aus
+
+SELECT topic_terms, count(topic_terms) FROM open_data_posts_classified group by topic_terms order by count(topic_terms) desc;
+-> Gezählte Themenverteilung
+
+SELECT topic_terms,count(topic_terms), strftime('%Y', creation_date) as dates FROM open_data_posts_classified group by topic_terms, dates
+-> Gibt Anzahl Topic pro Jahr aus
+
+
+SELECT topic_terms,count(topic_terms) as counted, city FROM open_data_posts_classified group by topic_terms, city order by city
+-> Topics gezählt pro Kommune
+
+SELECT open_data_posts_classified.city, open_data_posts_classified.post_id, open_data_posts_classified.topic_terms, sum(tweets.retweeted_count)+sum(tweets.favorited_count) as reactions
+FROM open_data_posts_classified, tweets
+WHERE open_data_posts_classified.source='tweets' AND open_data_posts_classified.post_id = tweets.tweet_id
+GROUP BY open_data_posts_classified.post_id
+ORDER BY reactions desc;
+-> Reaktionen auf Tweets zum Thema Open Government; Geordnet nach Tweet
+
+SELECT open_data_posts_classified.city, open_data_posts_classified.post_id, open_data_posts_classified.topic_terms, sum(fb_posts.comment_count)+sum(fb_posts.shares_count)+sum(fb_posts.reactions_count) as reactions
+FROM open_data_posts_classified, fb_posts
+WHERE open_data_posts_classified.source='fb_posts' AND open_data_posts_classified.post_id = fb_posts.post_id
+GROUP BY open_data_posts_classified.post_id
+ORDER BY reactions desc;
+-> Reaktionen auf FB Posts zum Thema Open Government; Geordnet nach Post
+
+SELECT open_data_posts_classified.city, open_data_posts_classified.post_id, open_data_posts_classified.topic_terms, sum(yt_videos.comment_count)+sum(yt_videos.view_count)+sum(yt_videos.likes_count)+sum(yt_videos.dislike_count)+sum(yt_videos.favorite_count) as reactions
+FROM open_data_posts_classified, yt_videos
+WHERE open_data_posts_classified.source='yt_videos' AND open_data_posts_classified.post_id = yt_videos.video_id
+GROUP BY open_data_posts_classified.post_id
+ORDER BY reactions desc;
+-> Für Videos
+
+SELECT strftime('%Y', open_data_posts_classified.creation_date), sum(tweets.retweeted_count), sum(tweets.favorited_count),sum(tweets.retweeted_count)+sum(tweets.favorited_count) as reactions
+FROM open_data_posts_classified, tweets
+WHERE open_data_posts_classified.source='tweets' AND open_data_posts_classified.post_id = tweets.tweet_id
+GROUP BY strftime('%Y', open_data_posts_classified.creation_date)
+ORDER BY strftime('%Y', open_data_posts_classified.creation_date) asc;
+-> Reaktionen pro Jahr auf Open Government Tweets
+
+SELECT strftime('%Y', open_data_posts_classified.creation_date), sum(fb_posts.comment_count)+sum(fb_posts.shares_count)+sum(fb_posts.reactions_count) as reactions
+FROM open_data_posts_classified, fb_posts
+WHERE open_data_posts_classified.source='fb_posts' AND open_data_posts_classified.post_id = fb_posts.post_id
+GROUP BY strftime('%Y', open_data_posts_classified.creation_date)
+ORDER BY strftime('%Y', open_data_posts_classified.creation_date) asc;
+-> Reaktionen pro Jahr auf Open Government FB Posts
+
+SELECT strftime('%Y', open_data_posts_classified.creation_date), sum(yt_videos.comment_count),sum(yt_videos.view_count),sum(yt_videos.likes_count),sum(yt_videos.dislike_count),sum(yt_videos.favorite_count),
+				sum(yt_videos.comment_count)+sum(yt_videos.view_count)+sum(yt_videos.likes_count)+sum(yt_videos.dislike_count)+sum(yt_videos.favorite_count) as reactions
+FROM open_data_posts_classified, yt_videos
+WHERE open_data_posts_classified.source='yt_videos' AND open_data_posts_classified.post_id = yt_videos.video_id
+GROUP BY strftime('%Y', open_data_posts_classified.creation_date)
+ORDER BY strftime('%Y', open_data_posts_classified.creation_date) asc;
+-> für Youtube
+
+
+
+SELECT strftime('%Y', creation_date) as years, sum(retweeted_count), sum(favorited_count), sum(retweeted_count)+sum(favorited_count) from tweets 
+                             WHERE date(creation_date)<date('2017-12-23 07:00:00') AND date(creation_date)>date('2008-05-13 10:18:35') and is_retweet=0
+                             GROUP BY years ORDER BY years;
