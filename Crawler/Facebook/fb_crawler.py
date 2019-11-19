@@ -12,14 +12,16 @@ import requests
 from Database import database_interaction
 from Database import database_setup
 
-# graph = facebook.GraphAPI(access_token='EAALxHU6JEoYBAGd8svR5mFzZCVx3P8h02ZBZCAbRnA9byanMYuhZBIgDZBZCGcxeYVm7Ao3pwU8teUblKZAxpHysDvBaH2PGsSdowAYBulVLSO9cSjcU2WMOK2HnmU0J9cP5vzAonX394DVCaPKRQ4RlHcanrTHLPEZD')
-# users = graph.get_object('me')
-# print(users)
-
 def get_posts_from_timeline(link, city):
+    try:
+        with open('../credentials.json', 'r') as credential_file:
+            api_key = json.load(credential_file)['facebook']['api_key']
+    except FileNotFoundError:
+        print('The file containing the FB-Credentials was not found')
+    print(api_key)
     print('[+] Retrieving posts for: '+city)
     if link.startswith('https://de-de.'):
-        link = link.replace('de-de.','')
+        link = link.replace('de-de.', api_key)
     conn_objects = database_interaction.connect_to_db('../../Database/main_data.db')
     all_posts = []
     likes = {}
@@ -27,7 +29,7 @@ def get_posts_from_timeline(link, city):
     reactions = {}
     page = 1
     now_timestamp = str(int(time.time()))
-    graph = GraphAPI('EAALxHU6JEoYBAK61wx7SXZAVjQHJSa5bov9c2m78KbUPL2rmGu4gBy9wlgpoGJSO7gbjq5d8UHbXGZAd3mZB1ZBZAwZBgZA80w4W1wmSXxTWLqRUbkh9FcMUyrIYGFtZB5IZCxZCHnMU4nmvLfocYGXK4Rj01FIezO1fqWBLGDGqwXTQZDZD')
+    graph = GraphAPI(api-key)
     user_id = graph.get(link, fields='id')['id']
     try:
         # 1508520726 is the timestamp for 20th October 2017

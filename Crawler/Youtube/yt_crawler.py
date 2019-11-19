@@ -15,9 +15,14 @@ from urllib.parse import urlparse
 from link_extractor import open_website
 
 
-DEVELOPER_KEY = 'AIzaSyBGx9aV4FNp8spikeDSoE4jlQcCLMqltTo'
-YOUTUBE_API_SERVICE_NAME = 'youtube'
-YOUTUBE_API_VERSION = 'v3'
+try:
+    with open('../credentials.json', 'r') as credential_file:
+        youtube_credentials = json.load(credential_file)['youtube']
+    DEVELOPER_KEY = youtube_credentials['DEVELOPER_KEY']
+    YOUTUBE_API_SERVICE_NAME = youtube_credentials['YOUTUBE_API_SERVICE_NAME']
+    YOUTUBE_API_VERSION = youtube_credentials['YOUTUBE_API_VERSION']
+except FileNotFoundError:
+    print('The file containing the YouTube-Credentials was not found')
 
 def get_channel_id(link):
     website = open_website(link)

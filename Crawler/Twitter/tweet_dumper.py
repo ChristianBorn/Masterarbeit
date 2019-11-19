@@ -12,11 +12,15 @@ from tweepy.error import TweepError
 
 
 #Twitter API credentials
-consumer_key = "uNDgOJ3sUM5IicocPQ8riRhEg"
-consumer_secret = "2U0B04VOqNgVKlMCWd7KPawdxSwvRzxqcLtC8nh9aobzt3uVVK"
-access_key = "407059263-rS77JdDpBxgoAEtj4lo9xaMYkkBMpbfrUDBbNH76"
-access_secret = "bg87yfK7tpc7llPQrAD5cwIJ6x73cp1wCpCw0QC5a2Pg1"
-
+try:
+    with open('../credentials.json', 'r') as credential_file:
+        twitter_credentials = json.load(credential_file)['twitter']
+    consumer_key = twitter_credentials['consumer_key']
+    consumer_secret = twitter_credentials['consumer_secret']
+    access_key = twitter_credentials['access_key']
+    access_secret = twitter_credentials['access_secret']
+except FileNotFoundError:
+    print('The file containing the Twitter-Credentials was not found')
 
 def insert_tweets_in_db(tweetlist, screen_name, city):
     print('[+] Inserting tweets in Database...')
