@@ -1,1 +1,2 @@
 # Masterarbeit
+The goal was to investigate the social media communication of German municipalities in NRW with focus on e-government and open data. Data was exctracted from Twitter, Facebook and Youtube APIs. After cleaning, transforming and saving the data into a database it was analyzed both quantitavely and qualitatively. For the qualitative part, MALLET was used to extract subjects from the textual data. In total around 600,000 records where extracted and analyzed.
